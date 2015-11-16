@@ -2,6 +2,19 @@
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+
+
+<form action="@routes.PostController.addPost()" enctype="application/json" method="post">
+        content:
+        <input type="text" name="content">
+        <br>
+        likes:
+        <input type="text" name="likes">
+        <br>
+        email:
+        <input type="text" name="email">
+        <br>
+        <button>add post</button>
+    </form>
 
 }
