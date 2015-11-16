@@ -1,10 +1,6 @@
 package controllers;
-
-import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -17,9 +13,7 @@ import models.*;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
-import util.Common;
-import views.html.index;
-
+import views.html.post;
 /**
  * The main set of web services.
  */
@@ -36,6 +30,11 @@ public class PostController extends Controller {
     public PostController(final PostRepository postRepository, final UserRepository userRepository) {
         this.postRepository = postRepository;
         this.userRepository = userRepository;
+    }
+
+    // provide form for adding a new post
+    public Result newPost() {
+        return ok(post.render("hello"));
     }
 
     // add a post to the database using http POST method
@@ -102,7 +101,7 @@ public class PostController extends Controller {
         return ok(result);
     }
 
-    // get all posts by a user id
+    // get all posts by a user id in a time descending order
     public Result getAllPostsByUserId(Long id, String format) {
         if (id == null) {
             System.out.println("User id is null or empty!");
@@ -110,7 +109,7 @@ public class PostController extends Controller {
         }
 
         User user = userRepository.findOne(id);
-        List<Post> posts = postRepository.findAllByUser(user);
+        List<Post> posts = postRepository.findByUserOrderByCreateTimeDesc(user);
         if (posts == null) {
             System.out.println("Posts not found with user id: " + id);
             return notFound("Posts service not found with user id: " + id);
@@ -123,13 +122,5 @@ public class PostController extends Controller {
 
         return ok(result);
     }
-
-
-    // provide form for backend testing
-    public Result index() {
-        return ok(index.render("I am the backend"));
-    }
-
-
 
 }
