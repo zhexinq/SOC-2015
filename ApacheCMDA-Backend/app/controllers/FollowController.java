@@ -1,5 +1,6 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
 import models.*;
 import play.data.Form;
@@ -37,9 +38,19 @@ public class FollowController extends Controller {
 
     // follow a user
     public Result addFollow() {
-        FollowBean followBean = Form.form(FollowBean.class).bindFromRequest().get();
-        String followerEmail = followBean.getFollowerEmail();
-        String followeeEmail = followBean.getFolloweeEmail();
+                /* for debug */
+//        FollowBean followBean = Form.form(FollowBean.class).bindFromRequest().get();
+//        String followerEmail = followBean.getFollowerEmail();
+//        String followeeEmail = followBean.getFolloweeEmail();
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Follow not created, expecting Json data");
+            return badRequest("Follow not created, expecting Json data");
+        }
+
+        // Parse JSON file
+        String followerEmail = json.path("followerEmail").asText();
+        String followeeEmail = json.path("followeeEmail").asText();
 
         try {
             User follower = userRepository.findByEmail(followerEmail);

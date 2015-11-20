@@ -1,4 +1,5 @@
 package controllers;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
 
 import java.util.Date;
@@ -39,45 +40,36 @@ public class PostController extends Controller {
 
     // add a post to the database using http POST method
     public Result addPost() {
-        // TODO: connect with front end data
-        PostBean postBean = Form.form(PostBean.class).bindFromRequest().get();
-
-//        JsonNode json = request().body().asJson();
-//        if (json == null) {
-//            System.out
-//                    .println("Post not added, expecting Json data");
-//            return badRequest("Post not added, expecting Json data");
-//        }
-//
-//        // Parse JSON file
-//        String content = json.findPath("content").asText();
-//        int likes = json.findPath("likes").asInt();
+        /* for debug */
+//        PostBean postBean = Form.form(PostBean.class).bindFromRequest().get();
+//        String content = postBean.getContent();
+//        int likes = Integer.parseInt(postBean.getLikes());
+//        String email = postBean.getEmail();
 //        Date createTime = new Date();
-//        SimpleDateFormat format = new SimpleDateFormat(Common.DATE_PATTERN);
-//        try {
-//            createTime = format.parse(json.findPath("createTime").asText());
-//        } catch (ParseException e) {
-//            System.out.println("No creation date specified, set to current time");
-//        }
-//        String email = json.findPath("email").asText();
 
-        String content = postBean.getContent();
-        int likes = Integer.parseInt(postBean.getLikes());
-        String email = postBean.getEmail();
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Post not created, expecting Json data");
+            return badRequest("Post not created, expecting Json data");
+        }
+
+        String email = json.path("email").asText();
+        String content = json.path("content").asText();
+        int likes = json.path("likes").asInt();
         Date createTime = new Date();
 
-//        try {
+        try {
             User user = userRepository.findByEmail(email);
             Post newPost = new Post(user, content, likes, createTime);
             Post savedPost = postRepository.save(newPost);
             System.out.println("Climate Service saved: "
                     + savedPost.getContent());
             return created(new Gson().toJson(savedPost.getId()));
-//        } catch (PersistenceException pe) {
-//            pe.printStackTrace();
-//            System.out.println("Post not saved: " + content);
-//            return badRequest("Post not saved: " + content);
-//        }
+        } catch (PersistenceException pe) {
+            pe.printStackTrace();
+            System.out.println("Post not saved: " + content);
+            return badRequest("Post not saved: " + content);
+        }
     }
 
     // get a post by post id
