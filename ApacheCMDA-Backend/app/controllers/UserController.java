@@ -269,4 +269,59 @@ public class UserController extends Controller {
 
 	}
 
+    // get user by first name
+    public Result getUserByFirstName(String firstName, String format) {
+
+        List<User> users = userRepository.findByFirstName(firstName);
+
+        if (users == null) {
+            System.out.println("Users not found with user first name: " + firstName);
+            return notFound("Users not found with user first name: " + firstName);
+        }
+
+        // package response as json
+        String result = new String();
+        if (format.equals("json"))
+            result = new Gson().toJson(users);
+        return ok(result);
+    }
+
+    // get user by last name
+    public Result getUserByLastName(String lastName, String format) {
+
+        List<User> users = userRepository.findByLastName(lastName);
+
+        if (users == null) {
+            System.out.println("Users not found with user last name: " + lastName);
+            return notFound("Users not found with user last name: " + lastName);
+        }
+
+        // package response as json
+        String result = new String();
+        if (format.equals("json"))
+            result = new Gson().toJson(users);
+        return ok(result);
+    }
+
+    // get user by email
+    public Result getUserByEmail(String email, String format) {
+
+        User user = userRepository.findByEmail(email);
+
+        if (user == null) {
+            System.out.println("Users not found with user email: " + email);
+            return notFound("Users not found with user email: " + email);
+        }
+
+        // package response as json
+        String result = new String();
+        if (format.equals("json"))
+            result = new Gson().toJson(user);
+        return ok(result);
+    }
+
+    public Result getUserByPartial(String partial, String format) {
+        return ok("");
+    }
+
 }

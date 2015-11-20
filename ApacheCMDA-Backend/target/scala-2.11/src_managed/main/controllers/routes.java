@@ -1,6 +1,6 @@
 // @SOURCE:/Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:8aec440e2c08aabc034d57ea0eeb829b5b56f9d6
-// @DATE:Fri Nov 20 11:38:13 PST 2015
+// @HASH:9f1583cb079ce0ff50083ff1d956840ed6b13328
+// @DATE:Fri Nov 20 12:40:06 PST 2015
 
 package controllers;
 

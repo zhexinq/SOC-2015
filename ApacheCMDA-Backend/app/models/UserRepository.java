@@ -32,4 +32,6 @@ import javax.inject.Singleton;
 public interface UserRepository extends CrudRepository<User, Long> {
 	List<User> findByUserName(String userName);
 	User findByEmail(String email);
+	List<User> findByFirstName(String firstName);
+	List<User> findByLastName(String lastName);
 }
