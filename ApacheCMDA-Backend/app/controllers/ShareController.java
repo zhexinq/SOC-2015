@@ -30,6 +30,7 @@ public class ShareController extends Controller {
         this.postRepository = postRepository;
         this.userRepository = userRepository;
         this.shareRepository = shareRepository;
+
     }
 
     // provide form for adding a new share
@@ -83,7 +84,7 @@ public class ShareController extends Controller {
         if (format.equals("json")) {
             result = new Gson().toJson(posts);
         }
-
+        
         return ok(result);
     }
 }

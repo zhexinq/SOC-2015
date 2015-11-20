@@ -6,6 +6,9 @@
 # will call on the GlobalSettings.getController method to resolve the actual controller instance.
 # GET     /                           @controllers.Application.index
 
+# Testing page
+#GET           /                       @controllers.PostController.index()
+
 # Climate Service
 GET           /climateService/getClimateService/:name/json                                              @controllers.ClimateServiceController.getClimateService(name: String, format: String="json")
 GET           /climateService/getClimateService/id/:id                                                  @controllers.ClimateServiceController.getClimateServiceById(id: Long)
@@ -53,6 +56,26 @@ DELETE        /users/delete/:id                                                 
 GET			  /users/getAllUsers/json																	@controllers.UserController.getAllUsers(format: String="json")
 POST		  /users/isUserValid																		@controllers.UserController.isUserValid
 DELETE		  /users/delete/userName/:userName/password/:password										@controllers.UserController.deleteUserByUserNameandPassword(userName: String, password: String)
+GET           /users/new/test                                                                                @controllers.UserController.newUser()
+POST          /users/add/test                                                                           @controllers.UserController.addUserForTest()
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET           /assets/*file                                                                             controllers.Assets.at(path="/public", file)
+
+# Post
+#GET           /post/:id                                                                                 @controllers.PostController.getPost(id: Long, format: String="json")
+GET           /post/user/:id                                                                            @controllers.PostController.getAllPostsByUserId(id: Long, format: String="json")
+GET           /post/new                                                                                 @controllers.PostController.newPost()
+POST          /post                                                                                     @controllers.PostController.addPost()
+
+# Share
+GET           /share/new                                                                                @controllers.ShareController.newShare()
+POST          /share                                                                                    @controllers.ShareController.addSharePost()
+GET           /share/user/:id                                                                           @controllers.ShareController.getSharedPostsByUserId(id: Long, format: String="json")
+
+# Follow
+GET           /follow/new                                                                               @controllers.FollowController.newFollow()
+POST          /follow                                                                                   @controllers.FollowController.addFollow()
+GET           /follow/user/:id                                                                          @controllers.FollowController.getFolloweesByUserId(id: Long, format: String="json")
+

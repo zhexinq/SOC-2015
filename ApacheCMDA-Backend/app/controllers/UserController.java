@@ -19,8 +19,11 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import models.User;
+import models.UserBean;
 import models.UserRepository;
+import play.data.Form;
 import play.mvc.*;
 
 import javax.inject.Inject;
@@ -30,6 +33,8 @@ import javax.persistence.PersistenceException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
+import scala.util.parsing.json.JSONObject;
+import views.html.user;
 
 /**
  * The main set of web services.
@@ -219,6 +224,49 @@ public class UserController extends Controller {
 			return badRequest("User is not deleted");
 		}
 		
+	}
+
+
+    // new user for test
+    public Result newUser() {
+        return ok(user.render(""));
+    }
+
+	// add user test
+	public Result addUserForTest() {
+		UserBean userBean = Form.form(UserBean.class).bindFromRequest().get();
+
+		// Parse JSON file
+		String userName = userBean.getUserName();
+		String password = userBean.getPassword();
+		String firstName = userBean.getFirstName();
+		String lastName = userBean.getLastName();
+		String middleInitial = userBean.getMiddleInitial();
+		String affiliation = userBean.getAffiliation();
+		String title = userBean.getTitle();
+		String email = userBean.getEmail();
+		String mailingAddress = userBean.getMailingAddress();
+		String phoneNumber = userBean.getPhoneNumber();
+		String faxNumber = userBean.getFaxNumber();
+		String researchFields = userBean.getResearchFields();
+		String highestDegree = userBean.getHighestDegree();
+
+
+		try {
+			if (userRepository.findByUserName(userName).size()>0) {
+				System.out.println("UserName has been used: " + userName);
+				return badRequest("UserName has been used");
+			}
+			User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);
+			userRepository.save(user);
+			System.out.println("User saved: " + user.getId());
+			return created(new Gson().toJson(user.getId()));
+		} catch (PersistenceException pe) {
+			pe.printStackTrace();
+			System.out.println("User not saved: " + firstName + " " + lastName);
+			return badRequest("User not saved: " + firstName + " " + lastName);
+		}
+
 	}
 
 }

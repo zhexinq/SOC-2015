@@ -66,18 +66,18 @@ public class PostController extends Controller {
         String email = postBean.getEmail();
         Date createTime = new Date();
 
-        try {
+//        try {
             User user = userRepository.findByEmail(email);
             Post newPost = new Post(user, content, likes, createTime);
             Post savedPost = postRepository.save(newPost);
             System.out.println("Climate Service saved: "
                     + savedPost.getContent());
             return created(new Gson().toJson(savedPost.getId()));
-        } catch (PersistenceException pe) {
-            pe.printStackTrace();
-            System.out.println("Post not saved: " + content);
-            return badRequest("Post not saved: " + content);
-        }
+//        } catch (PersistenceException pe) {
+//            pe.printStackTrace();
+//            System.out.println("Post not saved: " + content);
+//            return badRequest("Post not saved: " + content);
+//        }
     }
 
     // get a post by post id
