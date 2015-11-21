@@ -41,30 +41,30 @@ public class PostController extends Controller {
     // add a post to the database using http POST method
     public Result addPost() {
         /* for debug */
-//        PostBean postBean = Form.form(PostBean.class).bindFromRequest().get();
-//        String content = postBean.getContent();
-//        int likes = Integer.parseInt(postBean.getLikes());
-//        String email = postBean.getEmail();
-//        Date createTime = new Date();
-
-        JsonNode json = request().body().asJson();
-        if (json == null) {
-            System.out.println("Post not created, expecting Json data");
-            return badRequest("Post not created, expecting Json data");
-        }
-
-        String email = json.path("email").asText();
-        String content = json.path("content").asText();
-        int likes = json.path("likes").asInt();
+        PostBean postBean = Form.form(PostBean.class).bindFromRequest().get();
+        String content = postBean.getContent();
+        int likes = Integer.parseInt(postBean.getLikes());
+        String email = postBean.getEmail();
         Date createTime = new Date();
+
+//        JsonNode json = request().body().asJson();
+//        if (json == null) {
+//            System.out.println("Post not created, expecting Json data");
+//            return badRequest("Post not created, expecting Json data");
+//        }
+
+//        String email = json.path("email").asText();
+//        String content = json.path("content").asText();
+//        int likes = json.path("likes").asInt();
+//        Date createTime = new Date();
 
         try {
             User user = userRepository.findByEmail(email);
             Post newPost = new Post(user, content, likes, createTime);
             Post savedPost = postRepository.save(newPost);
-            System.out.println("Climate Service saved: "
-                    + savedPost.getContent());
-            return created(new Gson().toJson(savedPost.getId()));
+            System.out.println("Post saved: "
+                    + savedPost.getUser().toString());
+            return created(new Gson().toJson(savedPost.getUser().toString()));
         } catch (PersistenceException pe) {
             pe.printStackTrace();
             System.out.println("Post not saved: " + content);

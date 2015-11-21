@@ -11,4 +11,5 @@ import java.util.List;
 public interface ShareRepository extends CrudRepository<Share, Long> {
     // find shares by user in time descending order
     List<Share> findByUserOrderByCreateTimeDesc(User user);
+    Share findByPost(Post post);
 }

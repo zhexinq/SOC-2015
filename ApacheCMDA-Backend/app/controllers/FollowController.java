@@ -3,6 +3,8 @@ package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
 import models.*;
+import org.omg.CosNaming.NamingContextPackage.NotFound;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -38,19 +40,26 @@ public class FollowController extends Controller {
 
     // follow a user
     public Result addFollow() {
-                /* for debug */
-//        FollowBean followBean = Form.form(FollowBean.class).bindFromRequest().get();
-//        String followerEmail = followBean.getFollowerEmail();
-//        String followeeEmail = followBean.getFolloweeEmail();
-        JsonNode json = request().body().asJson();
-        if (json == null) {
-            System.out.println("Follow not created, expecting Json data");
-            return badRequest("Follow not created, expecting Json data");
-        }
+        /* for debug */
+        FollowBean followBean = Form.form(FollowBean.class).bindFromRequest().get();
+        String followerEmail = followBean.getFollowerEmail();
+        String followeeEmail = followBean.getFolloweeEmail();
+        /* Chengshen's method */
+//        DynamicForm dynamicForm = Form.form().bindFromRequest();
+//        String followerEmail = dynamicForm.get("follower");
+//        String followeeEmail = dynamicForm.get("followee");
+        /* JSON method */
+//        JsonNode json = request().body().asJson();
+//        if (json == null) {
+//            System.out.println("Follow not created, expecting Json data");
+//            return badRequest("Follow not created, expecting Json data");
+//        }
 
         // Parse JSON file
-        String followerEmail = json.path("followerEmail").asText();
-        String followeeEmail = json.path("followeeEmail").asText();
+//        String followerEmail = json.path("followerEmail").asText();
+//        String followeeEmail = json.path("followeeEmail").asText();
+        System.out.println("receive follower: " + followerEmail);
+        System.out.println("receive followee: " + followeeEmail);
 
         try {
             User follower = userRepository.findByEmail(followerEmail);
@@ -65,6 +74,7 @@ public class FollowController extends Controller {
             System.out.println("Post not saved: follower email:" + followerEmail);
             return badRequest("Post not saved: follower email:" + followerEmail);
         }
+
     }
 
     // get all followers of a user by id
@@ -92,6 +102,31 @@ public class FollowController extends Controller {
         if (format.equals("json")) {
             result = new Gson().toJson(followers);
         }
+        return ok(result);
+    }
+
+
+    // revoke following
+    public Result deleteFollowById(Long id) {
+        Follow follow = followRepository.findOne(id);
+        if (follow == null)
+            return notFound("follow not found: id -> " + id);
+
+        followRepository.delete(id);
+
+        return ok("follow relationship is deleted: id ->" + id);
+    }
+
+    // get all followers
+    public Result getAllFollow() {
+        List<Follow> follows = new ArrayList<>();
+        for (Follow follow : followRepository.findAll()) {
+            follows.add(follow);
+        }
+
+        String result = new String();
+        result = new Gson().toJson(follows);
+
         return ok(result);
     }
 }

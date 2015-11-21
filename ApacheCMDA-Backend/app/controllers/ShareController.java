@@ -41,17 +41,17 @@ public class ShareController extends Controller {
     // share a post of others
     public Result addSharePost() {
         /* for debug */
-//        ShareBean shareBean = Form.form(ShareBean.class).bindFromRequest().get();
-//        String sharerEmail = shareBean.getSharerEmail();
-//        Long postId = Long.parseLong(shareBean.getPostId());
-        JsonNode json = request().body().asJson();
-        if (json == null) {
-            System.out.println("Share not created, expecting Json data");
-            return badRequest("Share not created, expecting Json data");
-        }
-
-        String sharerEmail = json.path("sharerEmail").asText();
-        Long postId = json.path("postId").asLong();
+        ShareBean shareBean = Form.form(ShareBean.class).bindFromRequest().get();
+        String sharerEmail = shareBean.getSharerEmail();
+        Long postId = Long.parseLong(shareBean.getPostId());
+//        JsonNode json = request().body().asJson();
+//        if (json == null) {
+//            System.out.println("Share not created, expecting Json data");
+//            return badRequest("Share not created, expecting Json data");
+//        }
+//
+//        String sharerEmail = json.path("sharerEmail").asText();
+//        Long postId = json.path("postId").asLong();
 
         try {
             User sharer = userRepository.findByEmail(sharerEmail);
@@ -88,12 +88,29 @@ public class ShareController extends Controller {
             posts.add(share.getPost());
         }
 
+        // get a list of creators associated with the posts
+        List<User> users = new ArrayList<>();
+        for (Post post : posts) {
+            System.out.println("user: " + post.getUser());
+            users.add(post.getUser());
+        }
+
         // package to JSON response
-        String result = new String();
+        String result_posts = new String();
+
         if (format.equals("json")) {
-            result = new Gson().toJson(posts);
+            result_posts = new Gson().toJson(posts);
         }
         
-        return ok(result);
+        return ok(result_posts);
+    }
+
+
+    // delete a share by postId
+    public Result deleteShareByPostId(Long postId) {
+        Post post = postRepository.findOne(postId);
+        Share share = shareRepository.findByPost(post);
+        shareRepository.delete(share);
+        return ok("delete");
     }
 }

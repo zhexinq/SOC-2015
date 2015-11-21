@@ -73,4 +73,15 @@ public class Post {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", user=" + user +
+                ", content='" + content + '\'' +
+                ", likes=" + likes +
+                ", createTime=" + createTime +
+                '}';
+    }
 }
