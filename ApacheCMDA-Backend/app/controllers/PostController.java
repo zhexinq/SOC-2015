@@ -115,4 +115,34 @@ public class PostController extends Controller {
         return ok(result);
     }
 
+    // like a post
+    public Result likeToPost() {
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Post not created, expecting Json data");
+            return badRequest("Post not created, expecting Json data");
+        }
+
+        String usrEmail = json.path("email").asText();
+        long postId = json.path("postId").asLong();
+
+        System.out.println("get user email " + usrEmail);
+        System.out.println("get post id " + postId);
+
+        Post post = postRepository.findOne(postId);
+        User user = userRepository.findByEmail(usrEmail);
+
+        if (user != null) {
+            if (post.addLike(usrEmail)) {
+                System.out.println("add like to post " + postId + ", user " + usrEmail);
+                postRepository.save(post);
+                return ok("add like successful.");
+            } else
+                return badRequest("user already liked");
+        } else {
+            System.out.println("cannot add like to post " + postId + ", user " + usrEmail);
+            return badRequest("user doesn't exist");
+        }
+    }
+
 }

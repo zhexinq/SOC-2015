@@ -68,10 +68,11 @@ POST          /users/add/test                                                   
 GET           /assets/*file                                                                             controllers.Assets.at(path="/public", file)
 
 # Post
-#GET          /post/:id                                                                                @controllers.PostController.getPost(id: Long, format: String="json")
+GET           /onepost/:id                                                                              @controllers.PostController.getPost(id: Long, format: String="json")
 GET           /post/user/:id                                                                            @controllers.PostController.getAllPostsByUserId(id: Long, format: String="json")
 GET           /post/new                                                                                 @controllers.PostController.newPost()
 POST          /post                                                                                     @controllers.PostController.addPost()
+POST          /post/like                                                                                @controllers.PostController.likeToPost()
 
 # Share
 GET           /share/new                                                                                @controllers.ShareController.newShare()

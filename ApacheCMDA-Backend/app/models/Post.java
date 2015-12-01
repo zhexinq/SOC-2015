@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -23,6 +24,8 @@ public class Post {
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+
+    private ArrayList<String> likeUsers = new ArrayList<>();
 
     public Post() {
     }
@@ -74,6 +77,23 @@ public class Post {
         this.createTime = createTime;
     }
 
+    public ArrayList<String> getLikeUsers() {
+        return likeUsers;
+    }
+
+    public void setLikeUsers(ArrayList<String> likeUsers) {
+        this.likeUsers = likeUsers;
+    }
+
+
+    public boolean addLike(String usrEmail) {
+        if (likeUsers.contains(usrEmail))
+            return false;
+        likes++;
+        likeUsers.add(usrEmail);
+        return true;
+    }
+
     @Override
     public String toString() {
         return "Post{" +
@@ -82,6 +102,7 @@ public class Post {
                 ", content='" + content + '\'' +
                 ", likes=" + likes +
                 ", createTime=" + createTime +
+                ", likeUsers=" + likeUsers +
                 '}';
     }
 }
