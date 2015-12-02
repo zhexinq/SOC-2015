@@ -20,4 +20,8 @@ public interface PostRepository extends CrudRepository<Post, Long> {
     // get posts by likes
     @Query(value = "select * from Post order by likes desc", nativeQuery = true)
     List<Post> getPostsOrderByLikes();
+
+    // get posts whose contents contain keyword
+    @Query(value = "select * from Post where lower(content) like ?1 order by createTime", nativeQuery = true)
+    List<Post> getPostsContainsKeywordOrderByCreateTime(String keyword);
 }

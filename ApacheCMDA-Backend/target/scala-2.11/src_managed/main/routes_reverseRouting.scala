@@ -1,6 +1,6 @@
 // @SOURCE:/Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:e6f97f7194cb3efae0188ae51b46236b2c613224
-// @DATE:Tue Dec 01 23:09:00 PST 2015
+// @HASH:d01df51938ac55d75674004dc49fe83bf5c136f8
+// @DATE:Wed Dec 02 00:18:18 PST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:96
 // @LINE:95
 // @LINE:94
 // @LINE:91
@@ -325,6 +326,7 @@ def addParameter(): Call = {
 }
                           
 
+// @LINE:96
 // @LINE:95
 // @LINE:94
 class ReverseSearchController {
@@ -334,6 +336,13 @@ class ReverseSearchController {
 def searchUserFuzzy(partial:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "search/user/fuzzy/" + implicitly[PathBindable[String]].unbind("partial", dynamicString(partial)))
+}
+                        
+
+// @LINE:96
+def searchPostContentByKeyword(keyword:String): Call = {
+   implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
+   Call("GET", _prefix + { _defaultPrefix } + "search/post/" + implicitly[PathBindable[String]].unbind("keyword", dynamicString(keyword)))
 }
                         
 
@@ -644,6 +653,7 @@ def addSharePost(): Call = {
                   
 
 
+// @LINE:96
 // @LINE:95
 // @LINE:94
 // @LINE:91
@@ -1063,6 +1073,7 @@ def addParameter : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:96
 // @LINE:95
 // @LINE:94
 class ReverseSearchController {
@@ -1074,6 +1085,17 @@ def searchUserFuzzy : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function(partial) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search/user/fuzzy/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("partial", encodeURIComponent(partial))})
+      }
+   """
+)
+                        
+
+// @LINE:96
+def searchPostContentByKeyword : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.SearchController.searchPostContentByKeyword",
+   """
+      function(keyword) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search/post/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("keyword", encodeURIComponent(keyword))})
       }
    """
 )
@@ -1522,6 +1544,7 @@ def addSharePost : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:96
 // @LINE:95
 // @LINE:94
 // @LINE:91
@@ -1806,6 +1829,7 @@ def addParameter(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:96
 // @LINE:95
 // @LINE:94
 class ReverseSearchController {
@@ -1814,6 +1838,12 @@ class ReverseSearchController {
 // @LINE:95
 def searchUserFuzzy(partial:String, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.SearchController]).searchUserFuzzy(partial, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.SearchController", "searchUserFuzzy", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """search/user/fuzzy/$partial<[^/]+>""")
+)
+                      
+
+// @LINE:96
+def searchPostContentByKeyword(keyword:String, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.SearchController]).searchPostContentByKeyword(keyword, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.SearchController", "searchPostContentByKeyword", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """search/post/$keyword<[^/]+>""")
 )
                       
 

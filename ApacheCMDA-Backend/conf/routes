@@ -92,4 +92,5 @@ GET           /comment/post/:id                                                 
 
 # Search
 POST          /search/user/criteria                                                                     @controllers.SearchController.searchUsingCriteria()
-GET           /search/user/fuzzy/:partial                                                                     @controllers.SearchController.searchUserFuzzy(partial: String, format: String="json")
+GET           /search/user/fuzzy/:partial                                                               @controllers.SearchController.searchUserFuzzy(partial: String, format: String="json")
+GET           /search/post/:keyword                                                                     @controllers.SearchController.searchPostContentByKeyword(keyword: String, format: String="json")

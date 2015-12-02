@@ -2,6 +2,7 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
+import models.Post;
 import models.PostRepository;
 import models.User;
 import models.UserRepository;
@@ -69,6 +70,20 @@ public class SearchController extends Controller {
         String result = new String();
         if (format.equals("json"))
             result = new Gson().toJson(users);
+
+        return ok(result);
+    }
+
+    // search key word in post content
+    public Result searchPostContentByKeyword(String keyword, String format) {
+        // search for keyword in all posts
+        keyword = keyword.toLowerCase();
+        keyword = "%" + keyword + "%";
+        List<Post> posts = postRepository.getPostsContainsKeywordOrderByCreateTime(keyword);
+
+        String result = new String();
+        if (format.equals("json"))
+            result = new Gson().toJson(posts);
 
         return ok(result);
     }

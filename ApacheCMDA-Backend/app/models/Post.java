@@ -37,7 +37,6 @@ public class Post {
         this.content = content;
         this.likes = likes;
         this.createTime = createTime;
-        this.likeUsers = likeUsers;
         this.privacy = privacy;
     }
 
