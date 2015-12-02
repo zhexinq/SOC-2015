@@ -16,4 +16,8 @@ public interface PostRepository extends CrudRepository<Post, Long> {
     // get all posts given a user id in time descending order
     @Query(value = "select p.* from Post p, User u where p.creatorId=u.id order by p.createTime desc", nativeQuery = true)
     List<Post> getPostByUserOrderByCreateTimeDesc();
+
+    // get posts by likes
+    @Query(value = "select * from Post order by likes desc", nativeQuery = true)
+    List<Post> getPostsOrderByLikes();
 }

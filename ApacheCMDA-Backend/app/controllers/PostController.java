@@ -2,6 +2,7 @@ package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -43,26 +44,28 @@ public class PostController extends Controller {
     // add a post to the database using http POST method
     public Result addPost() {
         /* for debug */
-        PostBean postBean = Form.form(PostBean.class).bindFromRequest().get();
-        String content = postBean.getContent();
-        int likes = Integer.parseInt(postBean.getLikes());
-        String email = postBean.getEmail();
-        Date createTime = new Date();
-
-//        JsonNode json = request().body().asJson();
-//        if (json == null) {
-//            System.out.println("Post not created, expecting Json data");
-//            return badRequest("Post not created, expecting Json data");
-//        }
-
-//        String email = json.path("email").asText();
-//        String content = json.path("content").asText();
-//        int likes = json.path("likes").asInt();
+//        PostBean postBean = Form.form(PostBean.class).bindFromRequest().get();
+//        String content = postBean.getContent();
+//        int likes = Integer.parseInt(postBean.getLikes());
+//        String email = postBean.getEmail();
 //        Date createTime = new Date();
+
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Post not created, expecting Json data");
+            return badRequest("Post not created, expecting Json data");
+        }
+
+        // parse the json object
+        String email = json.path("email").asText();
+        String content = json.path("content").asText();
+        String privacy = json.path("privacy").asText();
+        int likes = 0;
+        Date createTime = new Date();
 
         try {
             User user = userRepository.findByEmail(email);
-            Post newPost = new Post(user, content, likes, createTime);
+            Post newPost = new Post(user, content, likes, createTime, privacy);
             Post savedPost = postRepository.save(newPost);
             System.out.println("Post saved: "
                     + savedPost.getUser().toString());
@@ -198,6 +201,30 @@ public class PostController extends Controller {
             System.out.println("edited post not saved:\n" + json.toString());
             return badRequest("edited post not saved:\n" + json.toString());
         }
+    }
+
+    // get top 10 most popular posts
+    public Result getTopTenPostsByPopularity(String format) {
+        // find top posts
+        List<Post> topPosts = postRepository.getPostsOrderByLikes();
+        List<Post> topTenPosts = new ArrayList<>();
+
+        // truncate the size if more than 10 posts
+        if (topPosts != null && topPosts.size() > 10) {
+            for (int i = 0; i < 10; i++) {
+                topTenPosts.add(topPosts.get(i));
+            }
+        } else {
+            topTenPosts = topPosts;
+        }
+
+        // format the result in json
+        String result = new String();
+        if (format.equals("json")) {
+            result = new Gson().toJson(topTenPosts);
+        }
+
+        return ok(result);
     }
 
 }

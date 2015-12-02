@@ -27,14 +27,18 @@ public class Post {
 
     private ArrayList<String> likeUsers = new ArrayList<>();
 
+    private String privacy;
+
     public Post() {
     }
 
-    public Post(User user, String content, int likes, Date createTime) {
+    public Post(User user, String content, int likes, Date createTime, String privacy) {
         this.user = user;
         this.content = content;
         this.likes = likes;
         this.createTime = createTime;
+        this.likeUsers = likeUsers;
+        this.privacy = privacy;
     }
 
     public long getId() {
@@ -85,6 +89,13 @@ public class Post {
         this.likeUsers = likeUsers;
     }
 
+    public String getPrivacy() {
+        return privacy;
+    }
+
+    public void setPrivacy(String privacy) {
+        this.privacy = privacy;
+    }
 
     public boolean addLike(String usrEmail) {
         if (likeUsers.contains(usrEmail))
@@ -93,6 +104,7 @@ public class Post {
         likeUsers.add(usrEmail);
         return true;
     }
+
 
     @Override
     public String toString() {
@@ -103,6 +115,7 @@ public class Post {
                 ", likes=" + likes +
                 ", createTime=" + createTime +
                 ", likeUsers=" + likeUsers +
+                ", privacy='" + privacy + '\'' +
                 '}';
     }
 }
