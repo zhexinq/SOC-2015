@@ -15,4 +15,5 @@ import java.util.List;
 @Singleton
 public interface CommentRepository extends CrudRepository<Comment, Long> {
     List<Comment> findByPostOrderByCreateTimeAsc(Post post);
+    List<Comment> findByPost(Post post);
 }

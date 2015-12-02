@@ -73,6 +73,7 @@ GET           /post/user/:id                                                    
 GET           /post/new                                                                                 @controllers.PostController.newPost()
 POST          /post                                                                                     @controllers.PostController.addPost()
 POST          /post/like                                                                                @controllers.PostController.likeToPost()
+GET           /post/delete/:id                                                                          @controllers.PostController.deletePostByPostId(id: Long)
 
 # Share
 GET           /share/new                                                                                @controllers.ShareController.newShare()

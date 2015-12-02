@@ -24,13 +24,15 @@ public class PostController extends Controller {
 
     private final PostRepository postRepository;
     private final UserRepository userRepository;
+    private final CommentRepository commentRepository;
 
     // We are using constructor injection to receive a repository to support our
     // desire for immutability.
     @Inject
-    public PostController(final PostRepository postRepository, final UserRepository userRepository) {
+    public PostController(PostRepository postRepository, UserRepository userRepository, CommentRepository commentRepository) {
         this.postRepository = postRepository;
         this.userRepository = userRepository;
+        this.commentRepository = commentRepository;
     }
 
     // provide form for adding a new post
@@ -143,6 +145,25 @@ public class PostController extends Controller {
             System.out.println("cannot add like to post " + postId + ", user " + usrEmail);
             return badRequest("user doesn't exist");
         }
+    }
+
+    // delete a post by postId
+    public Result deletePostByPostId(Long id) {
+        // find the post regarding the id
+        Post post = postRepository.findOne(id);
+        if (post == null) {
+            System.out.println("The post to delete doesn't exist: " + id);
+            return badRequest("The post to delete doesn't exist " + id);
+        }
+
+        // delete the comments associated with the post
+        List<Comment> comments = commentRepository.findByPost(post);
+        commentRepository.delete(comments);
+
+        // delete the post
+        postRepository.delete(id);
+        System.out.println("Post is deleted: " + id);
+        return ok("Post is deleted: " + id);
     }
 
 }
