@@ -29,7 +29,7 @@ public class SearchController extends Controller {
         this.postRepository = postRepository;
     }
 
-    // criteria search for user name
+    // criteria search for user
     public Result searchUsingCriteria() {
         JsonNode json = request().body().asJson();
         if (json == null) {
@@ -56,6 +56,19 @@ public class SearchController extends Controller {
                 .getUsersByCriteria(firstName, lastName, email, affiliation, title);
 
         String result = new Gson().toJson(users);
+
+        return ok(result);
+    }
+
+    // fuzzy search for user
+    public Result searchUserFuzzy(String partial, String format) {
+        // search the user table for satisfying the criteria
+        List<User> users = userRepository
+                .getUsersByFuzzySearch(partial);
+
+        String result = new String();
+        if (format.equals("json"))
+            result = new Gson().toJson(users);
 
         return ok(result);
     }

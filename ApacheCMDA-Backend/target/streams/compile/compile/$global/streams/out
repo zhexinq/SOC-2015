@@ -1,4 +1,4 @@
-[0m[[0mdebug[0m] [0mInvalidating /Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/target/scala-2.11/classes/models/UserRepository.class: stamp changed from lastModified(1449038630000) to lastModified(1449038883000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/target/scala-2.11/classes/models/UserRepository.class: stamp changed from lastModified(1449040146000) to lastModified(1449040258000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
@@ -17,10 +17,10 @@
 [0m[[0minfo[0m] [0mCompiling 5 Java sources to /Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/target/scala-2.11/classes...[0m
 [0m[[0mdebug[0m] [0mAttempting to call javac directly...[0m
 [0m[[0mdebug[0m] [0mcom.sun.tools.javac.Main not found with appropriate method signature; forking javac instead[0m
-[0m[[0mdebug[0m] [0mForking javac: javac @/var/folders/6h/_88c4khs46d8bpl_9km0b2m80000gn/T/sbt_cef46fa4/argfile[0m
+[0m[[0mdebug[0m] [0mForking javac: javac @/var/folders/6h/_88c4khs46d8bpl_9km0b2m80000gn/T/sbt_3e040e20/argfile[0m
 [0m[[0mdebug[0m] [0mjavac returned exit code: 0[0m
-[0m[[0mdebug[0m] [0mJava compilation took 1.244134118 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.064021457 s[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.326958606 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.062319115 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
