@@ -1,6 +1,6 @@
 // @SOURCE:/Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:2cba6acc6e5cdf005d3ad72f76a01591cbe24a84
-// @DATE:Tue Dec 01 18:00:11 PST 2015
+// @HASH:9b7e73c6c39c5377c304fc4ebf21d3035c6ae338
+// @DATE:Tue Dec 01 22:24:13 PST 2015
 
 package controllers;
 
@@ -10,6 +10,7 @@ public static final controllers.ReverseInstrumentController InstrumentController
 public static final controllers.ReverseFollowController FollowController = new controllers.ReverseFollowController();
 public static final controllers.ReverseUserController UserController = new controllers.ReverseUserController();
 public static final controllers.ReverseParameterController ParameterController = new controllers.ReverseParameterController();
+public static final controllers.ReverseSearchController SearchController = new controllers.ReverseSearchController();
 public static final controllers.ReversePostController PostController = new controllers.ReversePostController();
 public static final controllers.ReverseCommentController CommentController = new controllers.ReverseCommentController();
 public static final controllers.ReverseDatasetController DatasetController = new controllers.ReverseDatasetController();
@@ -22,6 +23,7 @@ public static final controllers.javascript.ReverseInstrumentController Instrumen
 public static final controllers.javascript.ReverseFollowController FollowController = new controllers.javascript.ReverseFollowController();
 public static final controllers.javascript.ReverseUserController UserController = new controllers.javascript.ReverseUserController();
 public static final controllers.javascript.ReverseParameterController ParameterController = new controllers.javascript.ReverseParameterController();
+public static final controllers.javascript.ReverseSearchController SearchController = new controllers.javascript.ReverseSearchController();
 public static final controllers.javascript.ReversePostController PostController = new controllers.javascript.ReversePostController();
 public static final controllers.javascript.ReverseCommentController CommentController = new controllers.javascript.ReverseCommentController();
 public static final controllers.javascript.ReverseDatasetController DatasetController = new controllers.javascript.ReverseDatasetController();
@@ -36,6 +38,7 @@ public static final controllers.ref.ReverseInstrumentController InstrumentContro
 public static final controllers.ref.ReverseFollowController FollowController = new controllers.ref.ReverseFollowController();
 public static final controllers.ref.ReverseUserController UserController = new controllers.ref.ReverseUserController();
 public static final controllers.ref.ReverseParameterController ParameterController = new controllers.ref.ReverseParameterController();
+public static final controllers.ref.ReverseSearchController SearchController = new controllers.ref.ReverseSearchController();
 public static final controllers.ref.ReversePostController PostController = new controllers.ref.ReversePostController();
 public static final controllers.ref.ReverseCommentController CommentController = new controllers.ref.ReverseCommentController();
 public static final controllers.ref.ReverseDatasetController DatasetController = new controllers.ref.ReverseDatasetController();

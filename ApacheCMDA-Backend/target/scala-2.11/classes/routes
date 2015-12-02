@@ -57,10 +57,6 @@ GET			  /users/getAllUsers/json																	@controllers.UserController.getA
 POST		  /users/isUserValid																		@controllers.UserController.isUserValid
 DELETE		  /users/delete/userName/:userName/password/:password										@controllers.UserController.deleteUserByUserNameandPassword(userName: String, password: String)
 
-GET           /user/:firstName                                                                         @controllers.UserController.getUserByFirstName(firstName: String, format="json")
-GET           /user/:lastName                                                                          @controllers.UserController.getUserByLastName(lastName: String, format="json")
-GET           /user/:email                                                                             @controllers.UserController.getUserByEmail(email: String, format="json")
-GET           /user/:partial                                                                           @controllers.UserController.getUserByPartial(partial: String, format="json")
 GET           /users/new/test                                                                           @controllers.UserController.newUser()
 POST          /users/add/test                                                                           @controllers.UserController.addUserForTest()
 
@@ -93,3 +89,6 @@ GET           /follow/delete/:followId                                          
 # Comment
 POST          /comment                                                                                  @controllers.CommentController.addComment()
 GET           /comment/post/:id                                                                        @controllers.CommentController.getAllCommentsByPostIdOrderByTimeAsc(id: Long, format: String="json")
+
+# Search
+POST          /search/user/criteria                                                                     @controllers.SearchController.searchUsingCriteria()
