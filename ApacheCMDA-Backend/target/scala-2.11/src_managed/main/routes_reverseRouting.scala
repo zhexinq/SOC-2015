@@ -1,6 +1,6 @@
 // @SOURCE:/Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:9a0ec22882b76cd7caa21650ae19994b0026f58f
-// @DATE:Tue Dec 01 14:32:30 PST 2015
+// @HASH:6f27835b930c34c7964f4d3f684f72e1be3b1483
+// @DATE:Tue Dec 01 16:17:35 PST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,8 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:92
+// @LINE:91
 // @LINE:88
 // @LINE:87
 // @LINE:86
@@ -400,6 +402,28 @@ def getPost(id:Long): Call = {
 }
                           
 
+// @LINE:92
+// @LINE:91
+class ReverseCommentController {
+
+
+// @LINE:91
+def addComment(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "comment")
+}
+                        
+
+// @LINE:92
+def getAllCommentsByPostIdOrderByTimeAsc(id:Long): Call = {
+   implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
+   Call("GET", _prefix + { _defaultPrefix } + "comment/post/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+}
+                          
+
 // @LINE:40
 // @LINE:39
 // @LINE:38
@@ -605,6 +629,8 @@ def addSharePost(): Call = {
                   
 
 
+// @LINE:92
+// @LINE:91
 // @LINE:88
 // @LINE:87
 // @LINE:86
@@ -1135,6 +1161,36 @@ def getPost : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:92
+// @LINE:91
+class ReverseCommentController {
+
+
+// @LINE:91
+def addComment : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.CommentController.addComment",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "comment"})
+      }
+   """
+)
+                        
+
+// @LINE:92
+def getAllCommentsByPostIdOrderByTimeAsc : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.CommentController.getAllCommentsByPostIdOrderByTimeAsc",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "comment/post/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+}
+              
+
 // @LINE:40
 // @LINE:39
 // @LINE:38
@@ -1432,6 +1488,8 @@ def addSharePost : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:92
+// @LINE:91
 // @LINE:88
 // @LINE:87
 // @LINE:86
@@ -1776,6 +1834,26 @@ def newPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:71
 def getPost(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.PostController]).getPost(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.PostController", "getPost", Seq(classOf[Long], classOf[String]), "GET", """ Post""", _prefix + """onepost/$id<[^/]+>""")
+)
+                      
+
+}
+                          
+
+// @LINE:92
+// @LINE:91
+class ReverseCommentController {
+
+
+// @LINE:91
+def addComment(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.CommentController]).addComment(), HandlerDef(this.getClass.getClassLoader, "", "controllers.CommentController", "addComment", Seq(), "POST", """ Comment""", _prefix + """comment""")
+)
+                      
+
+// @LINE:92
+def getAllCommentsByPostIdOrderByTimeAsc(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.CommentController]).getAllCommentsByPostIdOrderByTimeAsc(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.CommentController", "getAllCommentsByPostIdOrderByTimeAsc", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """comment/post/$id<[^/]+>""")
 )
                       
 
