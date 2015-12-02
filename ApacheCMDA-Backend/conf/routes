@@ -74,6 +74,7 @@ GET           /post/new                                                         
 POST          /post                                                                                     @controllers.PostController.addPost()
 POST          /post/like                                                                                @controllers.PostController.likeToPost()
 GET           /post/delete/:id                                                                          @controllers.PostController.deletePostByPostId(id: Long)
+POST          /post/edit                                                                                @controllers.PostController.editPostByPostId()
 
 # Share
 GET           /share/new                                                                                @controllers.ShareController.newShare()

@@ -166,4 +166,38 @@ public class PostController extends Controller {
         return ok("Post is deleted: " + id);
     }
 
+    // edit a post by postId
+    public Result editPostByPostId() {
+        // read json body from the request
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Cant not edit post, expecting Json data");
+            return badRequest("Cant not edit post, expecting Json data");
+        }
+
+        // parse the json object
+        String newContent = json.path("newContent").asText();
+        Long postId = json.path("postId").asLong();
+
+        System.out.println("receive new content: " + newContent);
+        System.out.println("receive post: " + postId);
+
+        try {
+            // get the post to be edited
+            Post editPost = postRepository.findOne(postId);
+            if (editPost == null) {
+                System.out.println("post to edit doesn't exist " + postId);
+                return badRequest("post to edit doesn't exist: " + postId);
+            }
+            editPost.setContent(newContent);
+            Post editedPost = postRepository.save(editPost);
+            System.out.println("post edited: " + editedPost.toString());
+            return created(new Gson().toJson(editedPost.toString()));
+        } catch (PersistenceException pe) {
+            pe.printStackTrace();
+            System.out.println("edited post not saved:\n" + json.toString());
+            return badRequest("edited post not saved:\n" + json.toString());
+        }
+    }
+
 }
