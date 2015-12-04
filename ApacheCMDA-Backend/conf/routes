@@ -79,6 +79,7 @@ GET           /share/new                                                        
 POST          /share                                                                                    @controllers.ShareController.addSharePost()
 GET           /share/user/:id                                                                           @controllers.ShareController.getSharedPostsByUserId(id: Long, format: String="json")
 GET           /share/delete/:postId                                                                     @controllers.ShareController.deleteShareByPostId(postId: Long)
+GET           /share/deleteAll                                                                          @controllers.ShareController.deleteAllShares()
 
 # Follow
 GET           /follow/new                                                                               @controllers.FollowController.newFollow()

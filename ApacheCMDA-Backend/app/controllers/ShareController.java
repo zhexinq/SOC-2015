@@ -13,6 +13,7 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 import javax.persistence.PersistenceException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -108,11 +109,21 @@ public class ShareController extends Controller {
     }
 
 
-    // delete a share by postId
+    // delete shares by postId
     public Result deleteShareByPostId(Long postId) {
         Post post = postRepository.findOne(postId);
-        Share share = shareRepository.findByPost(post);
-        shareRepository.delete(share);
+        List<Share> shares = shareRepository.findByPost(post);
+        shareRepository.delete(shares);
         return ok("delete");
+    }
+
+    // delete all shares
+    public Result deleteAllShares() {
+//        User user = userRepository.findOne(1L);
+//        Post newPost = new Post(14, user, "casdoc", 0, new Date(), "public", "12", "23");
+//        Post savedPost = postRepository.save(newPost);
+//        System.out.println("saved post: " + savedPost.toString());
+        shareRepository.deleteAll();
+        return ok("delete all shares");
     }
 }

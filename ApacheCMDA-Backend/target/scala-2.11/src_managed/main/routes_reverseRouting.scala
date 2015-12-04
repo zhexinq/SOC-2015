@@ -1,6 +1,6 @@
 // @SOURCE:/Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:89caf1743a34d5376b806c4dd1580ffa6f214aaf
-// @DATE:Thu Dec 03 18:39:07 PST 2015
+// @HASH:12d1d04fd3340df594c828b563a161de06316db8
+// @DATE:Thu Dec 03 19:14:10 PST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,16 +15,17 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:98
 // @LINE:97
 // @LINE:96
-// @LINE:95
+// @LINE:93
 // @LINE:92
-// @LINE:91
+// @LINE:89
 // @LINE:88
 // @LINE:87
 // @LINE:86
 // @LINE:85
-// @LINE:84
+// @LINE:82
 // @LINE:81
 // @LINE:80
 // @LINE:79
@@ -141,43 +142,43 @@ def deleteInstrument(id:Long): Call = {
 }
                           
 
+// @LINE:89
 // @LINE:88
 // @LINE:87
 // @LINE:86
 // @LINE:85
-// @LINE:84
 class ReverseFollowController {
 
 
-// @LINE:86
+// @LINE:87
 def getFolloweesByUserId(id:Long): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "follow/user/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:85
+// @LINE:86
 def addFollow(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "follow")
 }
                         
 
-// @LINE:84
+// @LINE:85
 def newFollow(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "follow/new")
 }
                         
 
-// @LINE:87
+// @LINE:88
 def getAllFollow(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "follow/all")
 }
                         
 
-// @LINE:88
+// @LINE:89
 def deleteFollowById(followId:Long): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "follow/delete/" + implicitly[PathBindable[Long]].unbind("followId", followId))
@@ -327,27 +328,27 @@ def addParameter(): Call = {
 }
                           
 
+// @LINE:98
 // @LINE:97
 // @LINE:96
-// @LINE:95
 class ReverseSearchController {
 
 
-// @LINE:96
+// @LINE:97
 def searchUserFuzzy(partial:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "search/user/fuzzy/" + implicitly[PathBindable[String]].unbind("partial", dynamicString(partial)))
 }
                         
 
-// @LINE:97
+// @LINE:98
 def searchPostContentByKeyword(keyword:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "search/post/" + implicitly[PathBindable[String]].unbind("keyword", dynamicString(keyword)))
 }
                         
 
-// @LINE:95
+// @LINE:96
 def searchUsingCriteria(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "search/user/criteria")
@@ -435,19 +436,19 @@ def getPost(id:Long): Call = {
 }
                           
 
+// @LINE:93
 // @LINE:92
-// @LINE:91
 class ReverseCommentController {
 
 
-// @LINE:91
+// @LINE:92
 def addComment(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "comment")
 }
                         
 
-// @LINE:92
+// @LINE:93
 def getAllCommentsByPostIdOrderByTimeAsc(id:Long): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "comment/post/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -621,6 +622,7 @@ def deleteClimateServiceByName(name:String): Call = {
 }
                           
 
+// @LINE:82
 // @LINE:81
 // @LINE:80
 // @LINE:79
@@ -628,10 +630,17 @@ def deleteClimateServiceByName(name:String): Call = {
 class ReverseShareController {
 
 
-// @LINE:80
-def getSharedPostsByUserId(id:Long): Call = {
-   implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
-   Call("GET", _prefix + { _defaultPrefix } + "share/user/" + implicitly[PathBindable[Long]].unbind("id", id))
+// @LINE:81
+def deleteShareByPostId(postId:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "share/delete/" + implicitly[PathBindable[Long]].unbind("postId", postId))
+}
+                        
+
+// @LINE:82
+def deleteAllShares(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "share/deleteAll")
 }
                         
 
@@ -642,10 +651,10 @@ def newShare(): Call = {
 }
                         
 
-// @LINE:81
-def deleteShareByPostId(postId:Long): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "share/delete/" + implicitly[PathBindable[Long]].unbind("postId", postId))
+// @LINE:80
+def getSharedPostsByUserId(id:Long): Call = {
+   implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
+   Call("GET", _prefix + { _defaultPrefix } + "share/user/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
@@ -662,16 +671,17 @@ def addSharePost(): Call = {
                   
 
 
+// @LINE:98
 // @LINE:97
 // @LINE:96
-// @LINE:95
+// @LINE:93
 // @LINE:92
-// @LINE:91
+// @LINE:89
 // @LINE:88
 // @LINE:87
 // @LINE:86
 // @LINE:85
-// @LINE:84
+// @LINE:82
 // @LINE:81
 // @LINE:80
 // @LINE:79
@@ -813,15 +823,15 @@ def deleteInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:89
 // @LINE:88
 // @LINE:87
 // @LINE:86
 // @LINE:85
-// @LINE:84
 class ReverseFollowController {
 
 
-// @LINE:86
+// @LINE:87
 def getFolloweesByUserId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FollowController.getFolloweesByUserId",
    """
@@ -832,7 +842,7 @@ def getFolloweesByUserId : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:85
+// @LINE:86
 def addFollow : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FollowController.addFollow",
    """
@@ -843,7 +853,7 @@ def addFollow : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:84
+// @LINE:85
 def newFollow : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FollowController.newFollow",
    """
@@ -854,7 +864,7 @@ def newFollow : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:87
+// @LINE:88
 def getAllFollow : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FollowController.getAllFollow",
    """
@@ -865,7 +875,7 @@ def getAllFollow : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:88
+// @LINE:89
 def deleteFollowById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FollowController.deleteFollowById",
    """
@@ -1083,13 +1093,13 @@ def addParameter : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:98
 // @LINE:97
 // @LINE:96
-// @LINE:95
 class ReverseSearchController {
 
 
-// @LINE:96
+// @LINE:97
 def searchUserFuzzy : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.SearchController.searchUserFuzzy",
    """
@@ -1100,7 +1110,7 @@ def searchUserFuzzy : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:97
+// @LINE:98
 def searchPostContentByKeyword : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.SearchController.searchPostContentByKeyword",
    """
@@ -1111,7 +1121,7 @@ def searchPostContentByKeyword : JavascriptReverseRoute = JavascriptReverseRoute
 )
                         
 
-// @LINE:95
+// @LINE:96
 def searchUsingCriteria : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.SearchController.searchUsingCriteria",
    """
@@ -1239,12 +1249,12 @@ def getPost : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:93
 // @LINE:92
-// @LINE:91
 class ReverseCommentController {
 
 
-// @LINE:91
+// @LINE:92
 def addComment : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CommentController.addComment",
    """
@@ -1255,7 +1265,7 @@ def addComment : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:92
+// @LINE:93
 def getAllCommentsByPostIdOrderByTimeAsc : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CommentController.getAllCommentsByPostIdOrderByTimeAsc",
    """
@@ -1509,6 +1519,7 @@ def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
 }
               
 
+// @LINE:82
 // @LINE:81
 // @LINE:80
 // @LINE:79
@@ -1516,12 +1527,23 @@ def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
 class ReverseShareController {
 
 
-// @LINE:80
-def getSharedPostsByUserId : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.ShareController.getSharedPostsByUserId",
+// @LINE:81
+def deleteShareByPostId : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ShareController.deleteShareByPostId",
    """
-      function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "share/user/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      function(postId) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "share/delete/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("postId", postId)})
+      }
+   """
+)
+                        
+
+// @LINE:82
+def deleteAllShares : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ShareController.deleteAllShares",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "share/deleteAll"})
       }
    """
 )
@@ -1538,12 +1560,12 @@ def newShare : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:81
-def deleteShareByPostId : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.ShareController.deleteShareByPostId",
+// @LINE:80
+def getSharedPostsByUserId : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ShareController.getSharedPostsByUserId",
    """
-      function(postId) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "share/delete/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("postId", postId)})
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "share/user/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -1566,16 +1588,17 @@ def addSharePost : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:98
 // @LINE:97
 // @LINE:96
-// @LINE:95
+// @LINE:93
 // @LINE:92
-// @LINE:91
+// @LINE:89
 // @LINE:88
 // @LINE:87
 // @LINE:86
 // @LINE:85
-// @LINE:84
+// @LINE:82
 // @LINE:81
 // @LINE:80
 // @LINE:79
@@ -1687,39 +1710,39 @@ def deleteInstrument(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.Han
 }
                           
 
+// @LINE:89
 // @LINE:88
 // @LINE:87
 // @LINE:86
 // @LINE:85
-// @LINE:84
 class ReverseFollowController {
 
 
-// @LINE:86
+// @LINE:87
 def getFolloweesByUserId(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.FollowController]).getFolloweesByUserId(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.FollowController", "getFolloweesByUserId", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """follow/user/$id<[^/]+>""")
 )
                       
 
-// @LINE:85
+// @LINE:86
 def addFollow(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.FollowController]).addFollow(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FollowController", "addFollow", Seq(), "POST", """""", _prefix + """follow""")
 )
                       
 
-// @LINE:84
+// @LINE:85
 def newFollow(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.FollowController]).newFollow(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FollowController", "newFollow", Seq(), "GET", """ Follow""", _prefix + """follow/new""")
 )
                       
 
-// @LINE:87
+// @LINE:88
 def getAllFollow(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.FollowController]).getAllFollow(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FollowController", "getAllFollow", Seq(), "GET", """""", _prefix + """follow/all""")
 )
                       
 
-// @LINE:88
+// @LINE:89
 def deleteFollowById(followId:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.FollowController]).deleteFollowById(followId), HandlerDef(this.getClass.getClassLoader, "", "controllers.FollowController", "deleteFollowById", Seq(classOf[Long]), "GET", """""", _prefix + """follow/delete/$followId<[^/]+>""")
 )
@@ -1852,25 +1875,25 @@ def addParameter(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:98
 // @LINE:97
 // @LINE:96
-// @LINE:95
 class ReverseSearchController {
 
 
-// @LINE:96
+// @LINE:97
 def searchUserFuzzy(partial:String, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.SearchController]).searchUserFuzzy(partial, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.SearchController", "searchUserFuzzy", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """search/user/fuzzy/$partial<[^/]+>""")
 )
                       
 
-// @LINE:97
+// @LINE:98
 def searchPostContentByKeyword(keyword:String, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.SearchController]).searchPostContentByKeyword(keyword, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.SearchController", "searchPostContentByKeyword", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """search/post/$keyword<[^/]+>""")
 )
                       
 
-// @LINE:95
+// @LINE:96
 def searchUsingCriteria(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.SearchController]).searchUsingCriteria(), HandlerDef(this.getClass.getClassLoader, "", "controllers.SearchController", "searchUsingCriteria", Seq(), "POST", """ Search""", _prefix + """search/user/criteria""")
 )
@@ -1948,18 +1971,18 @@ def getPost(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.m
 }
                           
 
+// @LINE:93
 // @LINE:92
-// @LINE:91
 class ReverseCommentController {
 
 
-// @LINE:91
+// @LINE:92
 def addComment(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.CommentController]).addComment(), HandlerDef(this.getClass.getClassLoader, "", "controllers.CommentController", "addComment", Seq(), "POST", """ Comment""", _prefix + """comment""")
 )
                       
 
-// @LINE:92
+// @LINE:93
 def getAllCommentsByPostIdOrderByTimeAsc(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.CommentController]).getAllCommentsByPostIdOrderByTimeAsc(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.CommentController", "getAllCommentsByPostIdOrderByTimeAsc", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """comment/post/$id<[^/]+>""")
 )
@@ -2113,6 +2136,7 @@ def deleteClimateServiceByName(name:String): play.api.mvc.HandlerRef[_] = new pl
 }
                           
 
+// @LINE:82
 // @LINE:81
 // @LINE:80
 // @LINE:79
@@ -2120,9 +2144,15 @@ def deleteClimateServiceByName(name:String): play.api.mvc.HandlerRef[_] = new pl
 class ReverseShareController {
 
 
-// @LINE:80
-def getSharedPostsByUserId(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ShareController]).getSharedPostsByUserId(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.ShareController", "getSharedPostsByUserId", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """share/user/$id<[^/]+>""")
+// @LINE:81
+def deleteShareByPostId(postId:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ShareController]).deleteShareByPostId(postId), HandlerDef(this.getClass.getClassLoader, "", "controllers.ShareController", "deleteShareByPostId", Seq(classOf[Long]), "GET", """""", _prefix + """share/delete/$postId<[^/]+>""")
+)
+                      
+
+// @LINE:82
+def deleteAllShares(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ShareController]).deleteAllShares(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ShareController", "deleteAllShares", Seq(), "GET", """""", _prefix + """share/deleteAll""")
 )
                       
 
@@ -2132,9 +2162,9 @@ def newShare(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:81
-def deleteShareByPostId(postId:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ShareController]).deleteShareByPostId(postId), HandlerDef(this.getClass.getClassLoader, "", "controllers.ShareController", "deleteShareByPostId", Seq(classOf[Long]), "GET", """""", _prefix + """share/delete/$postId<[^/]+>""")
+// @LINE:80
+def getSharedPostsByUserId(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ShareController]).getSharedPostsByUserId(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.ShareController", "getSharedPostsByUserId", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """share/user/$id<[^/]+>""")
 )
                       
 

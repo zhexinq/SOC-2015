@@ -26,14 +26,16 @@ public class PostController extends Controller {
     private final PostRepository postRepository;
     private final UserRepository userRepository;
     private final CommentRepository commentRepository;
+    private final ShareRepository shareRepository;
 
     // We are using constructor injection to receive a repository to support our
     // desire for immutability.
     @Inject
-    public PostController(PostRepository postRepository, UserRepository userRepository, CommentRepository commentRepository) {
+    public PostController(PostRepository postRepository, UserRepository userRepository, CommentRepository commentRepository, ShareRepository shareRepository) {
         this.postRepository = postRepository;
         this.userRepository = userRepository;
         this.commentRepository = commentRepository;
+        this.shareRepository = shareRepository;
     }
 
     // provide form for adding a new post
@@ -166,6 +168,10 @@ public class PostController extends Controller {
         // delete the comments associated with the post
         List<Comment> comments = commentRepository.findByPost(post);
         commentRepository.delete(comments);
+
+        // delete shares associated with the post
+        List<Share> shares = shareRepository.findByPost(post);
+        shareRepository.delete(shares);
 
         // delete the post
         postRepository.delete(id);

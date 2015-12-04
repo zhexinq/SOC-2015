@@ -36,6 +36,18 @@ public class Post {
     public Post() {
     }
 
+    public Post(long id, User user, String content, int likes, Date createTime, String privacy, String latitutde, String longitude) {
+        this.id = id;
+        this.user = user;
+        this.content = content;
+        this.likes = likes;
+        this.createTime = createTime;
+        this.likeUsers = likeUsers;
+        this.privacy = privacy;
+        this.latitutde = latitutde;
+        this.longitude = longitude;
+    }
+
     public Post(User user, String content, int likes, Date createTime, String privacy, String latitutde, String longitude) {
         this.user = user;
         this.content = content;
