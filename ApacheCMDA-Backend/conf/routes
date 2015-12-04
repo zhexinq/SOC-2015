@@ -72,6 +72,7 @@ POST          /post/like                                                        
 GET           /post/delete/:id                                                                          @controllers.PostController.deletePostByPostId(id: Long)
 POST          /post/edit                                                                                @controllers.PostController.editPostByPostId()
 GET           /post/popular                                                                             @controllers.PostController.getTopTenPostsByPopularity(format: String="json")
+GET           /post/delete/user/:id                                                                     @controllers.PostController.deleteAllPostsByUserId(id: Long)
 
 # Share
 GET           /share/new                                                                                @controllers.ShareController.newShare()

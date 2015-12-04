@@ -40,24 +40,24 @@ public class FollowController extends Controller {
 
     // follow a user
     public Result addFollow() {
-        /* for debug */
-        FollowBean followBean = Form.form(FollowBean.class).bindFromRequest().get();
-        String followerEmail = followBean.getFollowerEmail();
-        String followeeEmail = followBean.getFolloweeEmail();
+//        /* for debug */
+//        FollowBean followBean = Form.form(FollowBean.class).bindFromRequest().get();
+//        String followerEmail = followBean.getFollowerEmail();
+//        String followeeEmail = followBean.getFolloweeEmail();
         /* Chengshen's method */
 //        DynamicForm dynamicForm = Form.form().bindFromRequest();
 //        String followerEmail = dynamicForm.get("follower");
 //        String followeeEmail = dynamicForm.get("followee");
         /* JSON method */
-//        JsonNode json = request().body().asJson();
-//        if (json == null) {
-//            System.out.println("Follow not created, expecting Json data");
-//            return badRequest("Follow not created, expecting Json data");
-//        }
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Follow not created, expecting Json data");
+            return badRequest("Follow not created, expecting Json data");
+        }
 
         // Parse JSON file
-//        String followerEmail = json.path("followerEmail").asText();
-//        String followeeEmail = json.path("followeeEmail").asText();
+        String followerEmail = json.path("followerEmail").asText();
+        String followeeEmail = json.path("followeeEmail").asText();
         System.out.println("receive follower: " + followerEmail);
         System.out.println("receive followee: " + followeeEmail);
 

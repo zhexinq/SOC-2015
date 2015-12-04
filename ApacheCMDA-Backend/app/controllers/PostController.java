@@ -43,7 +43,8 @@ public class PostController extends Controller {
 
     // add a post to the database using http POST method
     public Result addPost() {
-        /* for debug */
+//        String content = json.path("content").asText();
+      /* for debug */
 //        PostBean postBean = Form.form(PostBean.class).bindFromRequest().get();
 //        String content = postBean.getContent();
 //        int likes = Integer.parseInt(postBean.getLikes());
@@ -60,12 +61,15 @@ public class PostController extends Controller {
         String email = json.path("email").asText();
         String content = json.path("content").asText();
         String privacy = json.path("privacy").asText();
+        String lon = json.path("lon").asText();
+        String lat = json.path("lat").asText();
+
         int likes = 0;
         Date createTime = new Date();
 
         try {
             User user = userRepository.findByEmail(email);
-            Post newPost = new Post(user, content, likes, createTime, privacy);
+            Post newPost = new Post(user, content, likes, createTime, privacy, lat, lon);
             Post savedPost = postRepository.save(newPost);
             System.out.println("Post saved: "
                     + savedPost.getUser().toString());
@@ -225,6 +229,24 @@ public class PostController extends Controller {
         }
 
         return ok(result);
+    }
+
+    // delete all posts by user email
+    public Result deleteAllPostsByUserId(Long id) {
+        // find the user with the id
+        User user = userRepository.findOne(id);
+        // find all posts assoiated with the user
+        List<Post> posts = postRepository.findByUserOrderByCreateTimeDesc(user);
+        if (posts == null) {
+            System.out.println("No posts associted with the queried user id: " + id);
+            return  notFound("No posts associted with the queried user id: " + id);
+        }
+        // delete the comments and posts
+        for (Post p : posts) {
+            deletePostByPostId(p.getId());
+        }
+
+        return ok("Posts are deleted with user: " + id);
     }
 
 }

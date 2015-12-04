@@ -40,19 +40,20 @@ public class ShareController extends Controller {
 
     // share a post of others
     public Result addSharePost() {
-        /* for debug */
-        ShareBean shareBean = Form.form(ShareBean.class).bindFromRequest().get();
-        String sharerEmail = shareBean.getSharerEmail();
-        Long postId = Long.parseLong(shareBean.getPostId());
+//        /* for debug */
+//        ShareBean shareBean = Form.form(ShareBean.class).bindFromRequest().get();
+//        String sharerEmail = shareBean.getSharerEmail();
+//        Long postId = Long.parseLong(shareBean.getPostId());
         /* JSON method */
-//        JsonNode json = request().body().asJson();
-//        if (json == null) {
-//            System.out.println("Share not created, expecting Json data");
-//            return badRequest("Share not created, expecting Json data");
-//        }
-//
-//        String sharerEmail = json.path("sharerEmail").asText();
-//        Long postId = json.path("postId").asLong();
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Share not created, expecting Json data");
+            return badRequest("Share not created, expecting Json data");
+        }
+
+        // Parse the JSON object
+        String sharerEmail = json.path("sharerEmail").asText();
+        Long postId = json.path("postId").asLong();
 
         try {
             User sharer = userRepository.findByEmail(sharerEmail);

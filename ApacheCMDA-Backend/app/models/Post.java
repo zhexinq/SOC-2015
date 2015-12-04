@@ -2,6 +2,7 @@ package models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -29,15 +30,20 @@ public class Post {
 
     private String privacy;
 
+    private String latitutde;
+    private String longitude;
+
     public Post() {
     }
 
-    public Post(User user, String content, int likes, Date createTime, String privacy) {
+    public Post(User user, String content, int likes, Date createTime, String privacy, String latitutde, String longitude) {
         this.user = user;
         this.content = content;
         this.likes = likes;
         this.createTime = createTime;
+        this.latitutde = latitutde;
         this.privacy = privacy;
+        this.longitude = longitude;
     }
 
     public long getId() {
@@ -96,6 +102,22 @@ public class Post {
         this.privacy = privacy;
     }
 
+    public String getLatitutde() {
+        return latitutde;
+    }
+
+    public void setLatitutde(String latitutde) {
+        this.latitutde = latitutde;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
     public boolean addLike(String usrEmail) {
         if (likeUsers.contains(usrEmail))
             return false;
@@ -103,7 +125,6 @@ public class Post {
         likeUsers.add(usrEmail);
         return true;
     }
-
 
     @Override
     public String toString() {
@@ -115,6 +136,8 @@ public class Post {
                 ", createTime=" + createTime +
                 ", likeUsers=" + likeUsers +
                 ", privacy='" + privacy + '\'' +
+                ", latitutde='" + latitutde + '\'' +
+                ", longitude='" + longitude + '\'' +
                 '}';
     }
 }
