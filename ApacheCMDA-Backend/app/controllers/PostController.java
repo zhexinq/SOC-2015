@@ -269,20 +269,25 @@ public class PostController extends Controller {
         // get all followed posts by the follower
         // get follow relationships
         List<Follow> follows = followRepository.findByFollower(follower);
-        // get all followee posts from a user's id
         List<Long> postIds = new ArrayList<>();
+        List<Post> posts = postRepository.findByUserOrderByCreateTimeDesc(follower);
+        // get the follower's self posts
+        for (Post p : posts) {
+            postIds.add(p.getId());
+        }
+        // get all followee posts from a user's id
         for (Follow f : follows) {
             User followee = f.getFollowee();
-            List<Post> posts = postRepository.findByUserOrderByCreateTimeDesc(followee);
+            posts = postRepository.findByUserOrderByCreateTimeDesc(followee);
             for (Post p : posts) {
                 postIds.add(p.getId());
             }
         }
 
-        // find all posts order by time
+        // find all posts
         List<Post> followedPosts = Lists.newArrayList(postRepository.findAll(postIds));
-        // reverse the order
-        Collections.reverse(followedPosts);
+        // sort the post by time order
+        Collections.sort(followedPosts);
 
         // format the result in json
         String result = new String();
@@ -292,5 +297,4 @@ public class PostController extends Controller {
 
         return ok(result);
     }
-
 }

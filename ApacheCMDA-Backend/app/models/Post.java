@@ -9,7 +9,7 @@ import java.util.Date;
  * Created by qiuzhexin on 11/5/15.
  */
 @Entity
-public class Post {
+public class Post implements Comparable<Post> {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -149,5 +149,13 @@ public class Post {
                 ", latitude='" + latitude + '\'' +
                 ", longitude='" + longitude + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Post o) {
+        int other = Integer.parseInt(String.valueOf(o.getId()));
+        int my = Integer.parseInt(String.valueOf(id));
+        // in time desc order
+        return other - my;
     }
 }

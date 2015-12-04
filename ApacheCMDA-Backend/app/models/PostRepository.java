@@ -27,5 +27,4 @@ public interface PostRepository extends CrudRepository<Post, Long> {
     @Query(value = "select * from Post where lower(content) like ?1 order by createTime", nativeQuery = true)
     List<Post> getPostsContainsKeywordOrderByCreateTime(String keyword);
 
-
 }
