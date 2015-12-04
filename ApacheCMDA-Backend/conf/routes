@@ -73,6 +73,7 @@ GET           /post/delete/:id                                                  
 POST          /post/edit                                                                                @controllers.PostController.editPostByPostId()
 GET           /post/popular                                                                             @controllers.PostController.getTopTenPostsByPopularity(format: String="json")
 GET           /post/delete/user/:id                                                                     @controllers.PostController.deleteAllPostsByUserId(id: Long)
+GET           /post/follow/:id                                                                          @controllers.PostController.findFolloweePostsByUserIdOrderByTime(id: Long, String="json")
 
 # Share
 GET           /share/new                                                                                @controllers.ShareController.newShare()
@@ -84,7 +85,7 @@ GET           /share/deleteAll                                                  
 # Follow
 GET           /follow/new                                                                               @controllers.FollowController.newFollow()
 POST          /follow                                                                                   @controllers.FollowController.addFollow()
-GET           /follow/user/:id                                                                          @controllers.FollowController.getFolloweesByUserId(id: Long, format: String="json")
+GET           /follow/user/:id                                                                          @controllers.FollowController.getFollowersByUserId(id: Long, format: String="json")
 GET           /follow/all                                                                               @controllers.FollowController.getAllFollow()
 GET           /follow/delete/:followId                                                                  @controllers.FollowController.deleteFollowById(followId: Long)
 

@@ -78,7 +78,7 @@ public class FollowController extends Controller {
     }
 
     // get all followers of a user by id
-    public Result getFolloweesByUserId(Long id, String format) {
+    public Result getFollowersByUserId(Long id, String format) {
         if (id == null) {
             System.out.println("User id is null or empty!");
             return badRequest("User id is null or empty!");

@@ -2,7 +2,6 @@ package models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -30,30 +29,29 @@ public class Post {
 
     private String privacy;
 
-    private String latitutde;
+    private String latitude;
     private String longitude;
 
     public Post() {
     }
 
-    public Post(long id, User user, String content, int likes, Date createTime, String privacy, String latitutde, String longitude) {
+    public Post(long id, User user, String content, int likes, Date createTime, String privacy, String latitude, String longitude) {
         this.id = id;
         this.user = user;
         this.content = content;
         this.likes = likes;
         this.createTime = createTime;
-        this.likeUsers = likeUsers;
         this.privacy = privacy;
-        this.latitutde = latitutde;
+        this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    public Post(User user, String content, int likes, Date createTime, String privacy, String latitutde, String longitude) {
+    public Post(User user, String content, int likes, Date createTime, String privacy, String latitude, String longitude) {
         this.user = user;
         this.content = content;
         this.likes = likes;
         this.createTime = createTime;
-        this.latitutde = latitutde;
+        this.latitude = latitude;
         this.privacy = privacy;
         this.longitude = longitude;
     }
@@ -114,12 +112,12 @@ public class Post {
         this.privacy = privacy;
     }
 
-    public String getLatitutde() {
-        return latitutde;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public void setLatitutde(String latitutde) {
-        this.latitutde = latitutde;
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 
     public String getLongitude() {
@@ -148,7 +146,7 @@ public class Post {
                 ", createTime=" + createTime +
                 ", likeUsers=" + likeUsers +
                 ", privacy='" + privacy + '\'' +
-                ", latitutde='" + latitutde + '\'' +
+                ", latitude='" + latitude + '\'' +
                 ", longitude='" + longitude + '\'' +
                 '}';
     }

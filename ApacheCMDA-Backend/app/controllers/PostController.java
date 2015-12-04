@@ -1,16 +1,16 @@
 package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 import javax.persistence.PersistenceException;
 
+import javafx.geometry.Pos;
 import models.*;
 import play.data.Form;
 import play.mvc.Controller;
@@ -27,15 +27,17 @@ public class PostController extends Controller {
     private final UserRepository userRepository;
     private final CommentRepository commentRepository;
     private final ShareRepository shareRepository;
+    private final FollowRepository followRepository;
 
     // We are using constructor injection to receive a repository to support our
     // desire for immutability.
     @Inject
-    public PostController(PostRepository postRepository, UserRepository userRepository, CommentRepository commentRepository, ShareRepository shareRepository) {
+    public PostController(PostRepository postRepository, UserRepository userRepository, CommentRepository commentRepository, ShareRepository shareRepository, FollowRepository followRepository) {
         this.postRepository = postRepository;
         this.userRepository = userRepository;
         this.commentRepository = commentRepository;
         this.shareRepository = shareRepository;
+        this.followRepository = followRepository;
     }
 
     // provide form for adding a new post
@@ -253,6 +255,42 @@ public class PostController extends Controller {
         }
 
         return ok("Posts are deleted with user: " + id);
+    }
+
+    // find all posts of my followees
+    public Result findFolloweePostsByUserIdOrderByTime(Long id, String format) {
+        // find the user corresponding to the id
+        User follower = userRepository.findOne(id);
+        if (follower == null) {
+            System.out.println("User not found corresponding to id: " + id);
+            return notFound("User not found corresponding to id: " + id);
+        }
+
+        // get all followed posts by the follower
+        // get follow relationships
+        List<Follow> follows = followRepository.findByFollower(follower);
+        // get all followee posts from a user's id
+        List<Long> postIds = new ArrayList<>();
+        for (Follow f : follows) {
+            User followee = f.getFollowee();
+            List<Post> posts = postRepository.findByUserOrderByCreateTimeDesc(followee);
+            for (Post p : posts) {
+                postIds.add(p.getId());
+            }
+        }
+
+        // find all posts order by time
+        List<Post> followedPosts = Lists.newArrayList(postRepository.findAll(postIds));
+        // reverse the order
+        Collections.reverse(followedPosts);
+
+        // format the result in json
+        String result = new String();
+        if (format.equals("json")) {
+            result = new Gson().toJson(followedPosts);
+        }
+
+        return ok(result);
     }
 
 }

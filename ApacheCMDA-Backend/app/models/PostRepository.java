@@ -2,6 +2,8 @@ package models;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -24,4 +26,6 @@ public interface PostRepository extends CrudRepository<Post, Long> {
     // get posts whose contents contain keyword
     @Query(value = "select * from Post where lower(content) like ?1 order by createTime", nativeQuery = true)
     List<Post> getPostsContainsKeywordOrderByCreateTime(String keyword);
+
+
 }
