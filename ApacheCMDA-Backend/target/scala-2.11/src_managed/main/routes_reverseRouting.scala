@@ -1,6 +1,6 @@
 // @SOURCE:/Users/qiuzhexin/Documents/workspace/SOC_final/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:d583fc3dbfb53451d5a40388d67f60af72df0800
-// @DATE:Fri Dec 04 12:36:27 PST 2015
+// @HASH:038b04e90b76c27e49b5059c0336423d78c863b9
+// @DATE:Tue Dec 08 15:28:56 PST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,10 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
 // @LINE:99
 // @LINE:98
 // @LINE:97
@@ -189,6 +193,10 @@ def deleteFollowById(followId:Long): Call = {
 }
                           
 
+// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
 // @LINE:61
 // @LINE:60
 // @LINE:58
@@ -212,6 +220,20 @@ def addUser(): Call = {
 def getUser(id:Long): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "users/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:102
+def autoCompFirstName(query:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "user/autocomplete/firstname/" + implicitly[PathBindable[String]].unbind("query", dynamicString(query)))
+}
+                        
+
+// @LINE:105
+def autoCompExact(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "user/autocomplete/exact")
 }
                         
 
@@ -254,6 +276,20 @@ def deleteUserByUserNameandPassword(userName:String, password:String): Call = {
 def isUserValid(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "users/isUserValid")
+}
+                        
+
+// @LINE:104
+def autoCompEmail(query:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "user/autocomplete/email/" + implicitly[PathBindable[String]].unbind("query", dynamicString(query)))
+}
+                        
+
+// @LINE:103
+def autoCompLastName(query:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "user/autocomplete/lastname/" + implicitly[PathBindable[String]].unbind("query", dynamicString(query)))
 }
                         
 
@@ -680,6 +716,10 @@ def addSharePost(): Call = {
                   
 
 
+// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
 // @LINE:99
 // @LINE:98
 // @LINE:97
@@ -899,6 +939,10 @@ def deleteFollowById : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
 // @LINE:61
 // @LINE:60
 // @LINE:58
@@ -928,6 +972,28 @@ def getUser : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function(id) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:102
+def autoCompFirstName : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.autoCompFirstName",
+   """
+      function(query) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "user/autocomplete/firstname/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("query", encodeURIComponent(query))})
+      }
+   """
+)
+                        
+
+// @LINE:105
+def autoCompExact : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.autoCompExact",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "user/autocomplete/exact"})
       }
    """
 )
@@ -994,6 +1060,28 @@ def isUserValid : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "users/isUserValid"})
+      }
+   """
+)
+                        
+
+// @LINE:104
+def autoCompEmail : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.autoCompEmail",
+   """
+      function(query) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "user/autocomplete/email/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("query", encodeURIComponent(query))})
+      }
+   """
+)
+                        
+
+// @LINE:103
+def autoCompLastName : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.autoCompLastName",
+   """
+      function(query) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "user/autocomplete/lastname/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("query", encodeURIComponent(query))})
       }
    """
 )
@@ -1610,6 +1698,10 @@ def addSharePost : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
 // @LINE:99
 // @LINE:98
 // @LINE:97
@@ -1774,6 +1866,10 @@ def deleteFollowById(followId:Long): play.api.mvc.HandlerRef[_] = new play.api.m
 }
                           
 
+// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
 // @LINE:61
 // @LINE:60
 // @LINE:58
@@ -1795,6 +1891,18 @@ def addUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:52
 def getUser(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).getUser(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "getUser", Seq(classOf[Long], classOf[String]), "GET", """ Users""", _prefix + """users/$id<[^/]+>""")
+)
+                      
+
+// @LINE:102
+def autoCompFirstName(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).autoCompFirstName(query), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "autoCompFirstName", Seq(classOf[String]), "GET", """ Auto completion""", _prefix + """user/autocomplete/firstname/$query<[^/]+>""")
+)
+                      
+
+// @LINE:105
+def autoCompExact(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).autoCompExact(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "autoCompExact", Seq(), "POST", """""", _prefix + """user/autocomplete/exact""")
 )
                       
 
@@ -1831,6 +1939,18 @@ def deleteUserByUserNameandPassword(userName:String, password:String): play.api.
 // @LINE:57
 def isUserValid(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).isUserValid(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "isUserValid", Seq(), "POST", """""", _prefix + """users/isUserValid""")
+)
+                      
+
+// @LINE:104
+def autoCompEmail(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).autoCompEmail(query), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "autoCompEmail", Seq(classOf[String]), "GET", """""", _prefix + """user/autocomplete/email/$query<[^/]+>""")
+)
+                      
+
+// @LINE:103
+def autoCompLastName(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).autoCompLastName(query), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "autoCompLastName", Seq(classOf[String]), "GET", """""", _prefix + """user/autocomplete/lastname/$query<[^/]+>""")
 )
                       
 

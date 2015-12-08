@@ -42,4 +42,17 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     @Query(value = "select * from User where SOUNDEX(firstName) like SOUNDEX(?1) or SOUNDEX(lastName) like SOUNDEX(?1) or SOUNDEX(email) like SOUNDEX(?1) or SOUNDEX(affiliation) like SOUNDEX(?1) or SOUNDEX(title) like SOUNDEX(?1)", nativeQuery = true)
     List<User> getUsersByFuzzySearch(String partial);
+
+    @Query(value = "select * from User where firstName like ?1", nativeQuery = true)
+    List<User> getUsersByFirstNameForAutoComp(String query);
+
+    @Query(value = "select * from User where lastName like ?1", nativeQuery = true)
+    List<User> getUsersByLastNameForAutoComp(String query);
+
+    @Query(value = "select * from User where email like ?1", nativeQuery = true)
+    List<User> getUsersByEmailForAutoComp(String query);
+
+    @Query(value = "select * from User where firstName like ?1 and lastName like ?2 and email like ?3", nativeQuery = true)
+    List<User> getUsersByExactMatchForAutoComp(String firstNameQuery, String lastNameQuery, String emailQuery);
+
 }

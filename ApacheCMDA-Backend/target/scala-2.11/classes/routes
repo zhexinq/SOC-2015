@@ -97,3 +97,9 @@ GET           /comment/post/:id                                                 
 POST          /search/user/criteria                                                                     @controllers.SearchController.searchUsingCriteria()
 GET           /search/user/fuzzy/:partial                                                               @controllers.SearchController.searchUserFuzzy(partial: String, format: String="json")
 GET           /search/post/:keyword                                                                     @controllers.SearchController.searchPostContentByKeyword(keyword: String, format: String="json")
+
+# Auto completion
+GET           /user/autocomplete/firstname/:query                                                        @controllers.UserController.autoCompFirstName(query: String)
+GET           /user/autocomplete/lastname/:query                                                       @controllers.UserController.autoCompLastName(query: String)
+GET           /user/autocomplete/email/:query                                                           @controllers.UserController.autoCompEmail(query: String)
+POST          /user/autocomplete/exact                                                                  @controllers.UserController.autoCompExact()

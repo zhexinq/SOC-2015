@@ -19,7 +19,6 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import models.User;
 import models.UserBean;
 import models.UserRepository;
@@ -33,7 +32,6 @@ import javax.persistence.PersistenceException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
-import scala.util.parsing.json.JSONObject;
 import views.html.user;
 
 /**
@@ -269,4 +267,39 @@ public class UserController extends Controller {
 
 	}
 
+	// Auto complete implementation
+    public Result autoCompFirstName(String query) {
+        List<User> users = userRepository.getUsersByFirstNameForAutoComp(query + "%");
+        String result = new Gson().toJson(users);
+        return ok(result);
+    }
+
+    public Result autoCompLastName(String query) {
+        List<User> users = userRepository.getUsersByLastNameForAutoComp(query + "%");
+        String result = new Gson().toJson(users);
+        return ok(result);
+    }
+
+    public Result autoCompEmail(String query) {
+        List<User> users = userRepository.getUsersByEmailForAutoComp(query + "%");
+        String result = new Gson().toJson(users);
+        return ok(result);
+    }
+
+    public Result autoCompExact() {
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            System.out.println("Post not created, expecting Json data");
+            return badRequest("Post not created, expecting Json data");
+        }
+
+        String firstNameQuery = json.path("firstName").asText();
+        String lastNameQuery = json.path("lastName").asText();
+        String emailQuery = json.path("email").asText();
+
+        List<User> users = userRepository
+                .getUsersByExactMatchForAutoComp(firstNameQuery  + "%", lastNameQuery  + "%", emailQuery + "%");
+        String result = new Gson().toJson(users);
+        return ok(result);
+    }
 }

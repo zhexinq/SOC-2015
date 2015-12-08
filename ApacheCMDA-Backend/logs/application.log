@@ -1,27 +1,123 @@
-2015-12-04 12:02:57,486 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 14:59:21,779 - [INFO] - from play in pool-4-thread-5 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-12-08 15:00:09,554 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-12-04 12:26:09,565 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 15:03:41,968 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-12-04 12:35:38,752 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 15:06:29,143 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-12-04 12:36:36,462 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 15:09:21,647 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-12-04 12:36:36,503 - [ERROR] - from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-146 
-Table 'post.p' doesn't exist
+2015-12-08 15:11:05,332 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
 
-2015-12-04 12:36:36,510 - [ERROR] - from play in play-akka.actor.default-dispatcher-146 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-
-2015-12-04 12:36:36,515 - [ERROR] - from application in play-akka.actor.default-dispatcher-146 
+2015-12-08 15:11:15,699 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6obbemhcl - Internal server error, for (GET) [/post/follow/1] ->
+! @6ocfbbkho - Internal server error, for (GET) [/] ->
 
-play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
+play.PlayExceptions$CompilationException: Compilation error[error: ')' expected]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.7.jar:2.3.7]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.7.jar:2.3.7]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
+
+2015-12-08 15:12:18,095 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:13:17,095 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:13:46,749 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:21:57,604 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:22:48,769 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:24:43,465 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6ocfd5jg3 - Internal server error, for (GET) [/user/autocomplete/firstname/Bob] ->
+
+play.PlayExceptions$CompilationException: Compilation error[value autoCompFirstName is not a member of controllers.UserController]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$3$$anonfun$apply$4.apply(PlayReloader.scala:97) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$3$$anonfun$apply$4.apply(PlayReloader.scala:97) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$3.apply(PlayReloader.scala:97) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$3.apply(PlayReloader.scala:91) ~[na:na]
+	at scala.util.Either$RightProjection.map(Either.scala:536) ~[scala-library-2.11.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:91) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.7.jar:2.3.7]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.7.jar:2.3.7]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
+
+2015-12-08 15:25:37,902 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:27:51,331 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:29:08,390 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:29:40,632 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:34:11,781 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:35:16,312 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:36:12,980 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-12-08 15:36:13,002 - [ERROR] - from play in play-akka.actor.default-dispatcher-30 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: org.hibernate.QueryException: JPA-style positional param was not an integral ordinal
+
+2015-12-08 15:36:13,031 - [ERROR] - from application in play-akka.actor.default-dispatcher-30 
+
+
+! @6ocfeiphl - Internal server error, for (GET) [/user/autocomplete/firstname/Bob] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: org.hibernate.QueryException: JPA-style positional param was not an integral ordinal]]
 	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
 	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.7.jar:2.3.7]
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
@@ -44,15 +140,19 @@ play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hib
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
+Caused by: java.lang.IllegalArgumentException: org.hibernate.QueryException: JPA-style positional param was not an integral ordinal
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1750) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
 	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:458) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1683) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createNativeQuery(AbstractEntityManagerImpl.java:956) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
+	at sun.reflect.GeneratedMethodAccessor64.invoke(Unknown Source) ~[na:na]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
 	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy74.getResultList(Unknown Source) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:289) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
+	at com.sun.proxy.$Proxy38.createNativeQuery(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.NativeJpaQuery.createJpaQuery(NativeJpaQuery.java:64) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:72) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:165) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
 	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:110) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
 	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:74) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
 	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:98) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
@@ -73,10 +173,10 @@ Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGr
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy684.getFollowedPostsByUserOrderByCreateTimeDesc(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:270) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
+	at com.sun.proxy.$Proxy286.getUsersByFirstNameForAutoComp(Unknown Source) ~[na:na]
+	at controllers.UserController.autoCompFirstName(UserController.java:272) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$67$$anonfun$apply$335.apply(routes_routing.scala:1063) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$67$$anonfun$apply$335.apply(routes_routing.scala:1063) ~[classes/:na]
 	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
 	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
@@ -109,340 +209,26 @@ Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGr
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
 	... 6 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:80) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:126) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:112) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:91) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.getResultSet(Loader.java:2066) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1863) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1839) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQuery(Loader.java:910) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:355) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2554) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2540) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2370) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.list(Loader.java:2365) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:353) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1873) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:311) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:141) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:573) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:449) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	... 66 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'post.p' doesn't exist
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.Util.getInstance(Util.java:360) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2030) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:116) ~[c3p0-0.9.2.1.jar:0.9.2.1]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:82) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	... 81 common frames omitted
+Caused by: org.hibernate.QueryException: JPA-style positional param was not an integral ordinal
+	at org.hibernate.engine.query.spi.ParameterParser.parse(ParameterParser.java:147) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
+	at org.hibernate.engine.query.spi.ParamLocationRecognizer.parseLocations(ParamLocationRecognizer.java:77) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
+	at org.hibernate.engine.query.internal.NativeQueryInterpreterStandardImpl.getParameterMetadata(NativeQueryInterpreterStandardImpl.java:51) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
+	at org.hibernate.engine.query.spi.QueryPlanCache.getSQLParameterMetadata(QueryPlanCache.java:142) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
+	at org.hibernate.internal.AbstractSessionImpl.createSQLQuery(AbstractSessionImpl.java:248) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
+	at org.hibernate.internal.SessionImpl.createSQLQuery(SessionImpl.java:1807) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createNativeQuery(AbstractEntityManagerImpl.java:951) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
+	... 69 common frames omitted
 
-2015-12-04 12:37:54,343 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 15:36:40,161 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-12-04 12:37:54,382 - [ERROR] - from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-147 
-Unknown column 'p.user' in 'where clause'
-
-2015-12-04 12:37:54,388 - [ERROR] - from play in play-akka.actor.default-dispatcher-147 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-
-2015-12-04 12:37:54,392 - [ERROR] - from application in play-akka.actor.default-dispatcher-147 
-
-
-! @6obbf12i2 - Internal server error, for (GET) [/post/follow/1] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:458) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy74.getResultList(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:110) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:74) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:98) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:89) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:421) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:381) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$DefaultMethodInvokingMethodInterceptor.invoke(RepositoryFactorySupport.java:512) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodIntercceptor.invoke(CrudMethodMetadataPostProcessor.java:122) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy702.getFollowedPostsByUserOrderByCreateTimeDesc(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:270) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.4.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	... 6 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:80) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:126) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:112) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:91) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.getResultSet(Loader.java:2066) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1863) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1839) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQuery(Loader.java:910) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:355) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2554) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2540) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2370) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.list(Loader.java:2365) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:353) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1873) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:311) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:141) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:573) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:449) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	... 66 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'p.user' in 'where clause'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.Util.getInstance(Util.java:360) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2030) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:116) ~[c3p0-0.9.2.1.jar:0.9.2.1]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:82) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	... 81 common frames omitted
-
-2015-12-04 12:37:59,629 - [ERROR] - from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-147 
-Unknown column 'p.user' in 'where clause'
-
-2015-12-04 12:37:59,631 - [ERROR] - from play in play-akka.actor.default-dispatcher-147 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-
-2015-12-04 12:37:59,634 - [ERROR] - from application in play-akka.actor.default-dispatcher-147 
-
-
-! @6obbf1abj - Internal server error, for (GET) [/post/follow/1] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:458) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy74.getResultList(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:110) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:74) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:98) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:89) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:421) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:381) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$DefaultMethodInvokingMethodInterceptor.invoke(RepositoryFactorySupport.java:512) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodIntercceptor.invoke(CrudMethodMetadataPostProcessor.java:122) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy702.getFollowedPostsByUserOrderByCreateTimeDesc(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:270) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.4.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	... 6 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:80) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:126) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:112) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:91) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.getResultSet(Loader.java:2066) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1863) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1839) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQuery(Loader.java:910) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:355) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2554) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2540) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2370) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.list(Loader.java:2365) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:353) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1873) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:311) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:141) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:573) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:449) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	... 66 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'p.user' in 'where clause'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.Util.getInstance(Util.java:360) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2030) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:116) ~[c3p0-0.9.2.1.jar:0.9.2.1]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:82) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	... 81 common frames omitted
-
-2015-12-04 12:41:22,566 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 12:41:22,585 - [ERROR] - from play in play-akka.actor.default-dispatcher-148 
+2015-12-08 15:36:40,172 - [ERROR] - from play in play-akka.actor.default-dispatcher-31 
 Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: Parameter with that position [1] did not exist
 
-2015-12-04 12:41:22,588 - [ERROR] - from application in play-akka.actor.default-dispatcher-148 
+2015-12-08 15:36:40,178 - [ERROR] - from application in play-akka.actor.default-dispatcher-31 
 
 
-! @6obbfcohh - Internal server error, for (GET) [/post/follow/1] ->
+! @6ocfekdm1 - Internal server error, for (GET) [/user/autocomplete/firstname/Bob] ->
 
 play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [1] did not exist]]
 	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
@@ -472,12 +258,11 @@ Caused by: java.lang.IllegalArgumentException: Parameter with that position [1] 
 	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:674) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
 	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:198) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
 	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:49) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[na:na]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
 	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
 	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy74.setParameter(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy55.setParameter(Unknown Source) ~[na:na]
 	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:165) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
 	at org.springframework.data.jpa.repository.query.StringQueryParameterBinder.bind(StringQueryParameterBinder.java:66) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
 	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:111) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
@@ -506,10 +291,10 @@ Caused by: java.lang.IllegalArgumentException: Parameter with that position [1] 
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy720.getFollowedPostsByUserOrderByCreateTimeDesc(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:270) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
+	at com.sun.proxy.$Proxy303.getUsersByFirstNameForAutoComp(Unknown Source) ~[na:na]
+	at controllers.UserController.autoCompFirstName(UserController.java:272) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$67$$anonfun$apply$335.apply(routes_routing.scala:1063) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$67$$anonfun$apply$335.apply(routes_routing.scala:1063) ~[classes/:na]
 	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
 	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
@@ -543,715 +328,12 @@ Caused by: java.lang.IllegalArgumentException: Parameter with that position [1] 
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
 	... 6 common frames omitted
 
-2015-12-04 12:41:50,584 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 15:37:22,193 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-12-04 12:41:50,624 - [ERROR] - from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-149 
-Unknown column 'p.user.id' in 'where clause'
-
-2015-12-04 12:41:50,626 - [ERROR] - from play in play-akka.actor.default-dispatcher-149 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-
-2015-12-04 12:41:50,629 - [ERROR] - from application in play-akka.actor.default-dispatcher-149 
-
-
-! @6obbfee44 - Internal server error, for (GET) [/post/follow/1] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:458) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy74.getResultList(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:110) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:74) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:98) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:89) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:421) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:381) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$DefaultMethodInvokingMethodInterceptor.invoke(RepositoryFactorySupport.java:512) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodIntercceptor.invoke(CrudMethodMetadataPostProcessor.java:122) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy738.getFollowedPostsByUserOrderByCreateTimeDesc(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:270) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.4.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	... 6 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:80) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:126) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:112) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:91) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.getResultSet(Loader.java:2066) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1863) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1839) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQuery(Loader.java:910) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:355) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2554) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2540) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2370) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.list(Loader.java:2365) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:353) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1873) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:311) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:141) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:573) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:449) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	... 66 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'p.user.id' in 'where clause'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.Util.getInstance(Util.java:360) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2030) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:116) ~[c3p0-0.9.2.1.jar:0.9.2.1]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:82) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	... 81 common frames omitted
-
-2015-12-04 12:42:56,345 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 15:37:52,559 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-12-04 12:42:56,368 - [ERROR] - from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-150 
-Unknown column 'p.user.id' in 'where clause'
-
-2015-12-04 12:42:56,370 - [ERROR] - from play in play-akka.actor.default-dispatcher-150 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-
-2015-12-04 12:42:56,373 - [ERROR] - from application in play-akka.actor.default-dispatcher-150 
-
-
-! @6obbfi7ak - Internal server error, for (GET) [/post/follow/1] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:458) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy74.getResultList(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:110) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:74) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:98) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:89) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:421) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:381) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$DefaultMethodInvokingMethodInterceptor.invoke(RepositoryFactorySupport.java:512) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodIntercceptor.invoke(CrudMethodMetadataPostProcessor.java:122) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy759.getFollowedPostsByUserOrderByCreateTimeDesc(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:270) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.4.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	... 6 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:80) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:126) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:112) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:91) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.getResultSet(Loader.java:2066) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1863) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1839) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQuery(Loader.java:910) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:355) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2554) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2540) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2370) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.list(Loader.java:2365) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:353) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1873) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:311) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:141) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:573) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:449) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	... 66 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'p.user.id' in 'where clause'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.Util.getInstance(Util.java:360) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2030) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:116) ~[c3p0-0.9.2.1.jar:0.9.2.1]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:82) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	... 81 common frames omitted
-
-2015-12-04 13:07:00,575 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 13:07:51,149 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 13:08:12,953 - [ERROR] - from play in play-akka.actor.default-dispatcher-152 
-Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: Parameter value element [59] did not match expected type [java.util.Date (n/a)]
-
-2015-12-04 13:08:12,957 - [ERROR] - from application in play-akka.actor.default-dispatcher-152 
-
-
-! @6obbj0emo - Internal server error, for (GET) [/post/follow/1] ->
-
-play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: Parameter value element [59] did not match expected type [java.util.Date (n/a)]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
-Caused by: java.lang.IllegalArgumentException: Parameter value element [59] did not match expected type [java.util.Date (n/a)]
-	at org.hibernate.jpa.spi.BaseQueryImpl.validateCollectionValuedParameterBinding(BaseQueryImpl.java:897) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.BaseQueryImpl.validateBinding(BaseQueryImpl.java:867) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.access$000(QueryImpl.java:80) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl$ParameterRegistrationImpl.bindValue(QueryImpl.java:248) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:620) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:180) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.criteria.compile.CriteriaQueryTypeQueryAdapter.setParameter(CriteriaQueryTypeQueryAdapter.java:167) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy55.setParameter(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.CriteriaQueryParameterBinder.bind(CriteriaQueryParameterBinder.java:73) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:111) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:185) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:176) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.invokeBinding(PartTreeJpaQuery.java:204) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:132) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:73) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:165) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:110) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:74) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:98) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:89) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:421) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:381) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$DefaultMethodInvokingMethodInterceptor.invoke(RepositoryFactorySupport.java:512) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodIntercceptor.invoke(CrudMethodMetadataPostProcessor.java:122) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy797.findAllOrderByCreateTime(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:273) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.4.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	... 6 common frames omitted
-
-2015-12-04 13:09:02,800 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 13:13:56,840 - [ERROR] - from application in New I/O worker #3 
-
-
-! @6obbjk3f5 - Internal server error, for (GET) [/users/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: ';' expected]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
-
-2015-12-04 13:13:57,984 - [ERROR] - from application in New I/O worker #4 
-
-
-! @6obbjk574 - Internal server error, for (GET) [/post/user/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: ';' expected]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
-
-2015-12-04 13:13:58,905 - [ERROR] - from application in New I/O worker #5 
-
-
-! @6obbjk6gh - Internal server error, for (GET) [/share/user/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: ';' expected]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
-
-2015-12-04 13:13:59,748 - [ERROR] - from application in New I/O worker #6 
-
-
-! @6obbjk7n2 - Internal server error, for (GET) [/post/popular] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: ';' expected]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
-
-2015-12-04 13:14:04,149 - [ERROR] - from application in New I/O worker #7 
-
-
-! @6obbjkea8 - Internal server error, for (GET) [/users/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: ';' expected]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.4.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.4.jar:na]
-
-2015-12-04 13:14:51,920 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 13:14:51,952 - [ERROR] - from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-154 
-Unknown column 'u.user' in 'where clause'
-
-2015-12-04 13:14:51,957 - [ERROR] - from play in play-akka.actor.default-dispatcher-154 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-
-2015-12-04 13:14:51,961 - [ERROR] - from application in play-akka.actor.default-dispatcher-154 
-
-
-! @6obbjn735 - Internal server error, for (GET) [/post/follow/1] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.7.jar:2.3.7]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.4.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.4.jar:na]
-Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:458) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:360) ~[spring-orm-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at com.sun.proxy.$Proxy74.getResultList(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:110) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:74) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:98) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:89) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:421) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:381) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$DefaultMethodInvokingMethodInterceptor.invoke(RepositoryFactorySupport.java:512) ~[spring-data-commons-1.9.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.0.7.RELEASE.jar:4.0.7.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodIntercceptor.invoke(CrudMethodMetadataPostProcessor.java:122) ~[spring-data-jpa-1.7.1.RELEASE.jar:na]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) ~[spring-aop-4.1.4.RELEASE.jar:4.1.4.RELEASE]
-	at com.sun.proxy.$Proxy841.getUsersFollowedBy(Unknown Source) ~[na:na]
-	at controllers.PostController.findFolloweePostsByUserIdOrderByTime(PostController.java:271) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$51$$anonfun$apply$279.apply(routes_routing.scala:907) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.4.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.4.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.7.jar:2.3.7]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.4.jar:na]
-	... 6 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:80) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:126) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:112) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:91) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.getResultSet(Loader.java:2066) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1863) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1839) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQuery(Loader.java:910) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:355) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2554) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.doList(Loader.java:2540) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2370) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.Loader.list(Loader.java:2365) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:353) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1873) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:311) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:141) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:573) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:449) ~[hibernate-entitymanager-4.3.7.Final.jar:4.3.7.Final]
-	... 66 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'u.user' in 'where clause'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.Util.getInstance(Util.java:360) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2030) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:116) ~[c3p0-0.9.2.1.jar:0.9.2.1]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:82) ~[hibernate-core-4.3.7.Final.jar:4.3.7.Final]
-	... 81 common frames omitted
-
-2015-12-04 13:24:02,185 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 13:25:55,414 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 13:32:50,782 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 14:23:01,957 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 15:07:06,558 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 15:09:59,351 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 15:14:40,797 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 15:16:59,428 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 15:37:05,608 - [INFO] - from play in play-internal-execution-context-2 
-Application started (Dev)
-
-2015-12-04 15:38:10,031 - [INFO] - from play in play-internal-execution-context-2 
+2015-12-08 15:39:22,555 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
